@@ -1,0 +1,34 @@
+---
+ID: "p4a4b4c4-d4e4-f404-0404-040404040406"
+Parent: "p4a4b4c4-d4e4-f404-0404-040404040405"
+Template: "h3a3b3c3-d3e3-f303-0303-030303030303"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Partial Designs/Global/Footer/Data/Footer"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "f3a3b3c3-0001-f303-0303-030303030303"
+      Hint: Logo
+      Value: "<image mediaid='{m1a1b1c1-d1e1-f101-0101-010101010107}' />"
+    - ID: "f3a3b3c3-0002-f303-0303-030303030303"
+      Hint: SiteName
+      Value: "Sitecore Properties"
+    - ID: "f3a3b3c3-0003-f303-0303-030303030303"
+      Hint: Description
+      Value: "Your trusted partner in finding the perfect property. We specialize in luxury real estate, family homes, and investment opportunities across prime locations."
+    - ID: "f3a3b3c3-0004-f303-0303-030303030303"
+      Hint: PhoneNumber
+      Value: "1-800-SITECORE"
+    - ID: "f3a3b3c3-0005-f303-0303-030303030303"
+      Hint: Email
+      Value: "info@sitecoreproperties.com"
+    - ID: "f3a3b3c3-0006-f303-0303-030303030303"
+      Hint: Address
+      Value: "123 Property Lane, Suite 500, San Francisco, CA 94105"
+    - ID: "f3a3b3c3-0007-f303-0303-030303030303"
+      Hint: CopyrightText
+      Value: "<p>&copy; 2024 Sitecore Properties. All rights reserved.</p>"

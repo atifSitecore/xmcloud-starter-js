@@ -97,6 +97,64 @@ SharedFields:
             $newsCardRendering = Get-Item -Path "$realstateRenderingsPath/News/NewsCard" -ErrorAction SilentlyContinue
             $propertyEnquiryFormRendering = Get-Item -Path "$realstateRenderingsPath/Forms/PropertyEnquiryForm" -ErrorAction SilentlyContinue
             
+            # Add Page Design and link partial designs
+            Write-Verbose "Creating Page Designs and linking Partial Designs"
+            $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -Language $Site.Language -ErrorAction SilentlyContinue
+            $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -Language $Site.Language -ErrorAction SilentlyContinue
+            
+            if ($headerPartial -and $footerPartial) {
+                # Create Default Page Design
+                $pageDesignsPath = "$sitePath/Presentation/Page Designs"
+                $defaultPageDesign = Get-Item -Path "$pageDesignsPath/Default" -Language $Site.Language -ErrorAction SilentlyContinue
+                
+                if (-not $defaultPageDesign) {
+                    $defaultPageDesign = New-Item -Path $pageDesignsPath -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
+                    Write-Verbose "Created Default Page Design"
+                }
+                
+                # Link Header and Footer partial designs to Default Page Design
+                $defaultPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
+                Write-Verbose "Linked Header and Footer partial designs to Default Page Design"
+                
+                # Create Property Page Design (for property detail pages)
+                $propertyPageDesign = Get-Item -Path "$pageDesignsPath/Property Page" -Language $Site.Language -ErrorAction SilentlyContinue
+                
+                if (-not $propertyPageDesign) {
+                    $propertyPageDesign = New-Item -Path $pageDesignsPath -Name "Property Page" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
+                    Write-Verbose "Created Property Page Design"
+                }
+                
+                # Property Page also uses Header and Footer
+                $propertyPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
+                Write-Verbose "Linked Header and Footer partial designs to Property Page Design"
+                
+                # Map page templates to page designs
+                $pageDesigns = Get-Item -path $pageDesignsPath -Language $Site.Language
+                
+                # Get page templates from tenant templates
+                $homePageTemplate = $TenantTemplates | Where-Object { $_.Name -eq "HomePage" } | Select-Object -First 1
+                $pageTemplate = $TenantTemplates | Where-Object { $_.Name -eq "Page" } | Select-Object -First 1
+                
+                if ($homePageTemplate -or $pageTemplate) {
+                    $map = [Sitecore.Text.UrlString]::new()
+                    
+                    if ($homePageTemplate) {
+                        $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
+                        Write-Verbose "Mapped HomePage template to Default Page Design"
+                    }
+                    
+                    if ($pageTemplate) {
+                        $map[$pageTemplate.ID] = "$($defaultPageDesign.ID)"
+                        Write-Verbose "Mapped Page template to Default Page Design"
+                    }
+                    
+                    $pageDesigns.TemplatesMapping = [System.Web.HttpUtility]::UrlEncode($map.toString())
+                    Write-Verbose "Updated Templates Mapping on Page Designs folder"
+                }
+            } else {
+                Write-Verbose "Header or Footer partial design not found - skipping Page Design creation"
+            }
+            
             Write-Verbose "Real Estate site setup completed successfully"
         }
         

@@ -1,0 +1,13 @@
+---
+ID: "h2a2b2c2-d2e2-f202-0202-020202020203"
+Parent: "h2a2b2c2-d2e2-f202-0202-020202020202"
+Template: "h2a2b2c2-d2e2-f202-0202-020202020202"
+Path: "/sitecore/templates/Project/kit-next-realstate/Components/Global Elements/SitecorePropertiesHeader/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

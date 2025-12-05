@@ -1,0 +1,29 @@
+---
+ID: "r3a3b3c3-d3e3-f303-0303-030303030303"
+Parent: "r1a1b1c1-d1e1-f101-0101-010101010101"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: "/sitecore/layout/Renderings/Project/kit-next-realstate/Global Elements/SitecorePropertiesFooter"
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: SitecorePropertiesFooter
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/window_footer.png
+- ID: "1a7c85e5-dc0b-4b1c-9dac-34e4f8c7ef01"
+  Hint: Datasource Location
+  Value: ./Data
+- ID: "7d3acecc-a0e4-4f24-a3a1-3f765e5a0fd0"
+  Hint: MvcParameters Template
+  Value: 
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Template
+  Value: "{h3a3b3c3-d3e3-f303-0303-030303030303}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

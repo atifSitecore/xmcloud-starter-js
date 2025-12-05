@@ -82,8 +82,8 @@ import { Default as Default_f14713561e7127543a30e797b8ea6464ba634f1f } from 'src
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { useI18n } from 'next-localization';
 import { dictionaryKeys } from '@/variables/dictionary';
+import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import Head from 'next/head';
-import NextLink from 'next/link';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import { Orientation } from '@/enumerations/Orientation.enum';
 import { Variation } from '@/enumerations/Variation.enum';
@@ -650,15 +650,15 @@ const importMap = [
     ]
   },
   {
-    module: 'next/head',
+    module: 'next/link',
     exports: [
-      { name: 'default', value: Head },
+      { name: 'default', value: Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 },
     ]
   },
   {
-    module: 'next/link',
+    module: 'next/head',
     exports: [
-      { name: 'default', value: NextLink },
+      { name: 'default', value: Head },
     ]
   },
   {
