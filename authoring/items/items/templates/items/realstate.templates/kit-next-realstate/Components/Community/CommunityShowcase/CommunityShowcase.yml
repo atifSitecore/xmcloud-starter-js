@@ -1,0 +1,13 @@
+---
+ID: "e5f6a7b8-c9d0-1234-ef01-234567890136"
+Parent: "e5f6a7b8-c9d0-1234-ef01-234567890134"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: "/sitecore/templates/Project/kit-next-realstate/Components/Community/CommunityShowcase/CommunityShowcase"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T120000Z

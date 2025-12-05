@@ -1,0 +1,114 @@
+---
+ID: "e0a3b4c5-d6f7-8901-2cde-f34567890123"
+Parent: "d9f2a3b4-c5e6-7890-1bcd-ef2345678901"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Kit Next Realstate/Functions/Realstate Site Setup
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    Import-Function Get-ItemByIdSafe
+    Import-Function Update-PageTemplate
+    Import-Function Update-TemplateInsertOptions
+    Import-Function Update-LinkField
+    
+    function Invoke-ModuleScriptBody {
+        [CmdletBinding()]
+        param(
+            [Parameter(Mandatory = $true, Position = 0 )]
+            [Item]$Site,
+        
+            [Parameter(Mandatory = $true, Position = 1 )]
+            [Item[]]$TenantTemplates	
+        )
+        
+        begin {
+            Write-Verbose "Kit Next Realstate - Post Site Creation Script"
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Begin"
+            Import-Function Get-ProjectTemplateBasedOnBaseTemplate
+        }
+        
+        process {
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Process"
+            $sitePath = $Site.Paths.Path
+            $siteCollection = $Site.Parent
+            $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
+            Write-Verbose "My site: $sitePath"
+    
+            # Create Data folders for Real Estate components
+            Write-Verbose "Creating Data folders for Real Estate components"
+            $dataFolder = Get-Item -Path "$sitePath/Data" -Language $Site.Language
+            
+            if ($dataFolder) {
+                # Property Hero Folder
+                if (-not (Test-Path "$sitePath/Data/Property Heroes")) {
+                    New-Item -Path "$sitePath/Data" -Name "Property Heroes" -ItemType "Common/Folder"
+                    Write-Verbose "Created Property Heroes folder"
+                }
+                
+                # Property Card Folder
+                if (-not (Test-Path "$sitePath/Data/Properties")) {
+                    New-Item -Path "$sitePath/Data" -Name "Properties" -ItemType "Common/Folder"
+                    Write-Verbose "Created Properties folder"
+                }
+                
+                # Property Grid Folder
+                if (-not (Test-Path "$sitePath/Data/Property Grids")) {
+                    New-Item -Path "$sitePath/Data" -Name "Property Grids" -ItemType "Common/Folder"
+                    Write-Verbose "Created Property Grids folder"
+                }
+                
+                # Community Card Folder
+                if (-not (Test-Path "$sitePath/Data/Communities")) {
+                    New-Item -Path "$sitePath/Data" -Name "Communities" -ItemType "Common/Folder"
+                    Write-Verbose "Created Communities folder"
+                }
+                
+                # Community Showcase Folder
+                if (-not (Test-Path "$sitePath/Data/Community Showcases")) {
+                    New-Item -Path "$sitePath/Data" -Name "Community Showcases" -ItemType "Common/Folder"
+                    Write-Verbose "Created Community Showcases folder"
+                }
+                
+                # News Card Folder
+                if (-not (Test-Path "$sitePath/Data/News")) {
+                    New-Item -Path "$sitePath/Data" -Name "News" -ItemType "Common/Folder"
+                    Write-Verbose "Created News folder"
+                }
+                
+                # Property Enquiry Form Folder
+                if (-not (Test-Path "$sitePath/Data/Enquiry Forms")) {
+                    New-Item -Path "$sitePath/Data" -Name "Enquiry Forms" -ItemType "Common/Folder"
+                    Write-Verbose "Created Enquiry Forms folder"
+                }
+            }
+    
+            # Add available renderings to placeholders
+            Write-Verbose "Adding Real Estate renderings to available renderings"
+            
+            $realstateRenderingsPath = '/sitecore/layout/Renderings/Project/kit-next-realstate'
+            
+            # Get all realstate renderings
+            $propertyHeroRendering = Get-Item -Path "$realstateRenderingsPath/Property/PropertyHero" -ErrorAction SilentlyContinue
+            $propertyCardRendering = Get-Item -Path "$realstateRenderingsPath/Property/PropertyCard" -ErrorAction SilentlyContinue
+            $propertyGridRendering = Get-Item -Path "$realstateRenderingsPath/Property/PropertyGrid" -ErrorAction SilentlyContinue
+            $communityCardRendering = Get-Item -Path "$realstateRenderingsPath/Community/CommunityCard" -ErrorAction SilentlyContinue
+            $communityShowcaseRendering = Get-Item -Path "$realstateRenderingsPath/Community/CommunityShowcase" -ErrorAction SilentlyContinue
+            $newsCardRendering = Get-Item -Path "$realstateRenderingsPath/News/NewsCard" -ErrorAction SilentlyContinue
+            $propertyEnquiryFormRendering = Get-Item -Path "$realstateRenderingsPath/Forms/PropertyEnquiryForm" -ErrorAction SilentlyContinue
+            
+            Write-Verbose "Real Estate site setup completed successfully"
+        }
+        
+        end {
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - End"
+        }
+    }
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

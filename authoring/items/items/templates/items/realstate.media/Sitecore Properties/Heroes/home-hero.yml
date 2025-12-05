@@ -1,0 +1,43 @@
+---
+ID: "8f678901-cdef-0123-89ab-def567890123"
+Parent: "7e567890-bcde-f012-789a-cde456789012"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/Sitecore Properties/Heroes/home-hero"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/8F678901CDEF012389ABDEF567890123.ashx?h=16&thn=1&w=16"
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "8f678901-cdef-0123-89ab-def567890123"
+  Value: PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiB2aWV3Qm94PSIwIDAgMTkyMCAxMDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9InNreUdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM4N2NlZWI7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlMGYwZmY7c3RvcC1vcGFjaXR5OjEiIC8+CiAgPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiBmaWxsPSJ1cmwoI3NreUdyYWQpIi8+CjxyZWN0IHk9IjcwMCIgd2lkdGg9IjE5MjAiIGhlaWdodD0iMzgwIiBmaWxsPSIjNGNhZjUwIi8+CjxyZWN0IHg9IjIwMCIgeT0iMjUwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjU1MCIgcng9IjE2IiBmaWxsPSIjZmZmOGYwIi8+CjxyZWN0IHg9IjkwMCIgeT0iMTgwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjYyMCIgcng9IjE2IiBmaWxsPSIjZjVmNWY1Ii8+CjxyZWN0IHg9IjI1MCIgeT0iMzAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgcng9IjgiIGZpbGw9IiM4MGJjZWUiLz4KPHJlY3QgeD0iNTAwIiB5PSIzMDAiIHdpZHRoPSIyNTAiIGhlaWdodD0iMTUwIiByeD0iOCIgZmlsbD0iIzgwYmNlZSIvPgo8cmVjdCB4PSI5NTAiIHk9IjI1MCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIxODAiIHJ4PSI4IiBmaWxsPSIjODBiY2VlIi8+CjxyZWN0IHg9IjEzMjAiIHk9IjI1MCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIxODAiIHJ4PSI4IiBmaWxsPSIjODBiY2VlIi8+CjxyZWN0IHg9Ijk1MCIgeT0iNDgwIiB3aWR0aD0iNjkwIiBoZWlnaHQ9IjI1MCIgcng9IjgiIGZpbGw9IiM0NDU1YWEiLz4KPGNpcmNsZSBjeD0iMTcwMCIgY3k9IjE1MCIgcj0iODAiIGZpbGw9IiNmZmQ3MDAiLz4KPHRleHQgeD0iOTYwIiB5PSI5NTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EaXNjb3ZlciBZb3VyIERyZWFtIEhvbWU8L3RleHQ+Cjx0ZXh0IHg9Ijk2MCIgeT0iMTAxMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RXhjbHVzaXZlIHByb3BlcnRpZXMgaW4gcHJpbWUgbG9jYXRpb25zPC90ZXh0Pgo8L3N2Zz4=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 1850
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 1920
+- ID: "6ee4dd1c-26ae-43e2-a1f9-14bc2cb39f88"
+  Hint: Height
+  Value: 1080
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+      Hint: __Display name
+      Value: Home Hero

@@ -1,0 +1,29 @@
+---
+ID: "a2c5d6e7-f8a9-0123-4ef0-567890123456"
+Parent: "f1b4c5d6-e7f8-9012-3def-456789012345"
+Template: "bed31d6f-d968-45a9-b54e-12d7f977d861"
+Path: /sitecore/system/Settings/Project/kit-next-realstate/Sitecore Properties Setup
+SharedFields:
+- ID: "06d2c562-9229-4779-8807-e2a5fd2990d4"
+  Hint: IsSystemModule
+  Value: 
+- ID: "11488836-d40f-40d4-beb4-1d31da7b1470"
+  Hint: IncludeByDefault
+  Value: 1
+- ID: "40deee2f-7595-40bd-b2c9-51f9e2346100"
+  Hint: Dependencies
+  Value: 
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f1a2b3c4-d5e6-7890-abcd-ef1234567890"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "c202067e-7fab-4606-afb4-e76df2185ddc"
+      Hint: Name
+      Value: Sitecore Properties

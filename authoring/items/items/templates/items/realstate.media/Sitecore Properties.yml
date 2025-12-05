@@ -1,0 +1,17 @@
+---
+ID: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+Parent: "90AE357F-6171-4EA9-808C-5A00D3D1B987"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: "/sitecore/media library/Project/Sitecore Properties"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

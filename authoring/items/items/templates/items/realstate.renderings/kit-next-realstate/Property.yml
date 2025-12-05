@@ -1,0 +1,21 @@
+---
+ID: "12345678-9abc-def0-1234-56789abcdef0"
+Parent: "01234567-89ab-cdef-0123-456789abcdef"
+Template: "840d4a46-5503-49ec-bf9d-bd090946c63d"
+Path: "/sitecore/layout/Renderings/Project/kit-next-realstate/Property"
+SharedFields:
+- ID: "6fd695e7-7f6d-4ca5-8b49-a829e5950ae9"
+  Hint: __Subitems Sorting
+  Value: "{44D1A0D2-E17B-4DAA-ADDF-53F2E8F58525}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Property
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T120000Z

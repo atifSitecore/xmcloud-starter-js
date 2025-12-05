@@ -1,0 +1,43 @@
+---
+ID: "5c345678-9abc-def0-5678-abc234567890"
+Parent: "3a123456-789a-bcde-3456-89a012345678"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/Sitecore Properties/Communities/waterfront-living"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/5C3456789ABCDEF05678ABC234567890.ashx?h=16&thn=1&w=16"
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "5c345678-9abc-def0-5678-abc234567890"
+  Value: PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDgwMCA1MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjZTBmN2ZhIi8+CjxyZWN0IHk9IjMwMCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMwMDk2YzciLz4KPHJlY3QgeD0iNTAiIHk9IjEwMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyNTAiIHJ4PSI4IiBmaWxsPSIjZmZmOGYwIi8+CjxyZWN0IHg9IjMwMCIgeT0iNjAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjkwIiByeD0iOCIgZmlsbD0iI2ZmZjhmMCIvPgo8cmVjdCB4PSI1NTAiIHk9IjEyMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMzAiIHJ4PSI4IiBmaWxsPSIjZmZmOGYwIi8+CjxjaXJjbGUgY3g9IjcwMCIgY3k9IjYwIiByPSI0MCIgZmlsbD0iI2ZmZDcwMCIvPgo8dGV4dCB4PSI0MDAiIHk9IjQ1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+V2F0ZXJmcm9udCBMaXZpbmc8L3RleHQ+Cjwvc3ZnPg==
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 820
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 800
+- ID: "6ee4dd1c-26ae-43e2-a1f9-14bc2cb39f88"
+  Hint: Height
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+      Hint: __Display name
+      Value: Waterfront Living

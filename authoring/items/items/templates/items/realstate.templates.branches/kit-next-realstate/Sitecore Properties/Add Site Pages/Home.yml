@@ -1,0 +1,64 @@
+---
+ID: "06345678-def0-1234-6789-012345678901"
+Parent: "f5234567-cdef-0123-5678-901234567890"
+Template: "35e75c72-4985-4e09-88c3-0eac6cd1e64f"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Site Pages/Home"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/home.png
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Home
+  - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+    Hint: Title
+    Value: "Welcome to Sitecore Properties"
+  - ID: "f8c88a5c-8c86-458d-9ce4-0c1c7b7d4c23"
+    Hint: NavigationTitle
+    Value: Home
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}"
+              p:before="*"
+              s:ds="local:/Data/Home Page Hero"
+              s:id="{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
+              s:ph="headless-main" />
+            <r
+              uid="{2B3C4D5E-6F78-9012-BCDE-F12345678901}"
+              p:after="r[@uid='{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}']"
+              s:ds="local:/Data/Featured Properties Grid"
+              s:id="{B2C3D4E5-F678-9012-CDEF-123456789012}"
+              s:ph="headless-main" />
+            <r
+              uid="{3C4D5E6F-7890-1234-CDEF-012345678901}"
+              p:after="r[@uid='{2B3C4D5E-6F78-9012-BCDE-F12345678901}']"
+              s:ds="local:/Data/Community Showcase"
+              s:id="{C3D4E5F6-7890-1234-DEF0-123456789012}"
+              s:ph="headless-main" />
+            <r
+              uid="{4D5E6F78-9012-3456-DEF0-123456789012}"
+              p:after="r[@uid='{3C4D5E6F-7890-1234-CDEF-012345678901}']"
+              s:ds="local:/Data/Contact Form"
+              s:id="{D4E5F678-9012-3456-EF01-234567890123}"
+              s:ph="headless-main" />
+          </d>
+        </r>

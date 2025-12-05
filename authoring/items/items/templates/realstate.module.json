@@ -1,0 +1,43 @@
+{
+    "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Project.kit-next-realstate",
+    "items": {
+        "includes": [
+            {
+                "name": "realstate.templates",
+                "path": "/sitecore/templates/Project/kit-next-realstate",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "realstate.templates.branches",
+                "path": "/sitecore/templates/Branches/Project/kit-next-realstate",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "realstate.modules",
+                "path": "/sitecore/system/settings/Project/kit-next-realstate",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "realstate.renderings",
+                "path": "/sitecore/Layout/Renderings/Project/kit-next-realstate",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "realstate.placeholderSettings",
+                "path": "/sitecore/Layout/Placeholder Settings/Project/kit-next-realstate",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "realstate.powershell",
+                "path": "/sitecore/system/Modules/PowerShell/Script Library/Kit Next Realstate",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "realstate.media",
+                "path": "/sitecore/media library/Project/Sitecore Properties",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            }
+        ]
+    }
+}

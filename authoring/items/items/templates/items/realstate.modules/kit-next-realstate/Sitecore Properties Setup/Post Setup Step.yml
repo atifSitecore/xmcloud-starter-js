@@ -1,0 +1,23 @@
+---
+ID: "b3d6e7f8-a9b0-1234-5f01-678901234567"
+Parent: "a2c5d6e7-f8a9-0123-4ef0-567890123456"
+Template: "8ff2febf-f6d2-461d-9ed3-8b0cb5d9d86f"
+Path: /sitecore/system/Settings/Project/kit-next-realstate/Sitecore Properties Setup/Post Setup Step
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "c0a5bd91-e658-46ce-b631-77ce337d8e6e"
+  Hint: Script
+  Value: "{e0a3b4c5-d6f7-8901-2cde-f34567890123}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

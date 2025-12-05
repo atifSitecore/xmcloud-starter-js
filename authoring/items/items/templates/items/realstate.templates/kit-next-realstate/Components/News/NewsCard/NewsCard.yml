@@ -1,0 +1,13 @@
+---
+ID: "f6a7b8c9-d0e1-2345-f012-345678901247"
+Parent: "f6a7b8c9-d0e1-2345-f012-345678901245"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: "/sitecore/templates/Project/kit-next-realstate/Components/News/NewsCard/NewsCard"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T120000Z

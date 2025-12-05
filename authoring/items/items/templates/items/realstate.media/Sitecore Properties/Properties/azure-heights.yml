@@ -1,0 +1,43 @@
+---
+ID: "f6789012-3456-789a-f012-456789012345"
+Parent: "e5f67890-1234-5678-ef01-345678901234"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/Sitecore Properties/Properties/azure-heights"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/F67890123456789AF012456789012345.ashx?h=16&thn=1&w=16"
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "f6789012-3456-789a-f012-456789012345"
+  Value: PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iODAwIiBmaWxsPSIjZTBlN2ZmIi8+CjxyZWN0IHg9IjIwMCIgeT0iMjAwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgcng9IjE2IiBmaWxsPSIjMDA1MUZGIi8+CjxyZWN0IHg9IjI1MCIgeT0iMjUwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE1MCIgcng9IjgiIGZpbGw9IiM4MGJCY2UiLz4KPHJlY3QgeD0iNjAwIiB5PSIyNTAiIHdpZHRoPSIzNTAiIGhlaWdodD0iMjAwIiByeD0iOCIgZmlsbD0iIzgwYmNlZSIvPgo8cmVjdCB4PSIyNTAiIHk9IjQ1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIHJ4PSI4IiBmaWxsPSIjNjY3N2NjIi8+CjxyZWN0IHg9IjUwMCIgeT0iNTAwIiB3aWR0aD0iNDUwIiBoZWlnaHQ9IjEwMCIgcng9IjgiIGZpbGw9IiM0NDU1YWEiLz4KPHRleHQgeD0iNjAwIiB5PSI1NjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkF6dXJlIEhlaWdodHM8L3RleHQ+Cjwvc3ZnPg==
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 950
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 1200
+- ID: "6ee4dd1c-26ae-43e2-a1f9-14bc2cb39f88"
+  Hint: Height
+  Value: 800
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+      Hint: __Display name
+      Value: Azure Heights

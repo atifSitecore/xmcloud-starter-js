@@ -1,0 +1,37 @@
+---
+ID: "9f678901-6789-abcd-f012-345678901234"
+Parent: "7d456789-4567-89ab-def0-123456789012"
+Template: "f6a7b8c9-d0e1-2345-f012-345678901245"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Sample Data/Data/News/New Development Announced"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+      Hint: Title
+      Value: "Sitecore Heights: New Development Announced"
+    - ID: "3c2b7d00-8de2-4636-a65f-d667a75ec4a7"
+      Hint: Description
+      Value: Introducing our newest luxury residential project featuring sustainable design and world-class amenities.
+    - ID: "c65eb2cc-503f-48cd-ba69-42c29df106c1"
+      Hint: Image
+      Value: |
+        <image mediaid="{8F678901-CDEF-0123-89AB-DEF567890123}" />
+    - ID: "d4e5f6a7-8901-2345-0123-456789012345"
+      Hint: Date
+      Value: 20251115T100000Z
+    - ID: "e5f6a7b8-9012-3456-1234-567890123456"
+      Hint: Category
+      Value: New Projects
+    - ID: "f6a7b8c9-0123-4567-2345-678901234567"
+      Hint: Link
+      Value: |
+        <link text="Read More" linktype="internal" url="/news/new-development-announced" anchor="" title="Read Article" class="" />

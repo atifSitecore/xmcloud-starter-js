@@ -1,0 +1,43 @@
+---
+ID: "29012345-6789-abcd-2345-789012345678"
+Parent: "e5f67890-1234-5678-ef01-345678901234"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/Sitecore Properties/Properties/city-penthouse"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/290123456789ABCD2345789012345678.ashx?h=16&thn=1&w=16"
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "29012345-6789-abcd-2345-789012345678"
+  Value: PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iODAwIiBmaWxsPSIjMWEyMDJjIi8+CjxyZWN0IHg9IjEwMCIgeT0iMTAwIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjYwMCIgcng9IjgiIGZpbGw9IiMzMzQxNTUiLz4KPHJlY3QgeD0iNDAwIiB5PSI1MCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSI2NTAiIHJ4PSI4IiBmaWxsPSIjNDQ1NTc3Ii8+CjxyZWN0IHg9Ijg1MCIgeT0iMTUwIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjU1MCIgcng9IjgiIGZpbGw9IiMzMzQxNTUiLz4KPHJlY3QgeD0iNDUwIiB5PSIxMDAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI1MCIgcng9IjQiIGZpbGw9IiNmZmQ3MDAiLz4KPHJlY3QgeD0iNTYwIiB5PSIxMDAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI1MCIgcng9IjQiIGZpbGw9IiNmZmQ3MDAiLz4KPHJlY3QgeD0iNjcwIiB5PSIxMDAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI1MCIgcng9IjQiIGZpbGw9IiNmZmQ3MDAiLz4KPHJlY3QgeD0iNDUwIiB5PSIxODAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI1MCIgcng9IjQiIGZpbGw9IiNmZmQ3MDAiLz4KPHJlY3QgeD0iNTYwIiB5PSIxODAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI1MCIgcng9IjQiIGZpbGw9IiNmZmQ3MDAiLz4KPHJlY3QgeD0iNjcwIiB5PSIxODAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI1MCIgcng9IjQiIGZpbGw9IiNmZmQ3MDAiLz4KPHRleHQgeD0iNjAwIiB5PSI3NTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNpdHkgUGVudGhvdXNlPC90ZXh0Pgo8L3N2Zz4=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 1280
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 1200
+- ID: "6ee4dd1c-26ae-43e2-a1f9-14bc2cb39f88"
+  Hint: Height
+  Value: 800
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+      Hint: __Display name
+      Value: City Penthouse
