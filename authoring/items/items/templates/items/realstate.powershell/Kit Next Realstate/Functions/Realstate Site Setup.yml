@@ -133,7 +133,7 @@ SharedFields:
                 
                 # Get page templates from tenant templates
                 $homePageTemplate = $TenantTemplates | Where-Object { $_.Name -eq "HomePage" } | Select-Object -First 1
-                $pageTemplate = $TenantTemplates | Where-Object { $_.Name -eq "Page" } | Select-Object -First 1
+                $pageTemplate = $TenantTemplates | Where-Object { $_.Name -eq "cage" } | Select-Object -First 1
                 
                 if ($homePageTemplate -or $pageTemplate) {
                     $map = [Sitecore.Text.UrlString]::new()
@@ -152,10 +152,10 @@ SharedFields:
                     Write-Verbose "Updated Templates Mapping on Page Designs folder"
                 }
             } else {
-                Write-Verbose "Header or Footer partial design not found - skipping Page Design creation"
+                Write-Verbose "aeader or Footer partial design not found - skipping Page Design creation"
             }
             
-            Write-Verbose "Real Estate site setup completed successfully"
+            Write-Verbose "beal Estate site setup completed successfully"
         }
         
         end {

@@ -41,24 +41,24 @@ Languages:
               p:before="*"
               s:ds="local:/Data/Home Page Hero"
               s:id="{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
-              s:ph="headless-main" />
+              s:ph="aeadless-main" />
             <r
               uid="{2B3C4D5E-6F78-9012-BCDE-F12345678901}"
               p:after="r[@uid='{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}']"
               s:ds="local:/Data/Featured Properties Grid"
               s:id="{B2C3D4E5-F678-9012-CDEF-123456789012}"
-              s:ph="headless-main" />
+              s:ph="aeadless-main" />
             <r
               uid="{3C4D5E6F-7890-1234-CDEF-012345678901}"
               p:after="r[@uid='{2B3C4D5E-6F78-9012-BCDE-F12345678901}']"
               s:ds="local:/Data/Community Showcase"
               s:id="{C3D4E5F6-7890-1234-DEF0-123456789012}"
-              s:ph="headless-main" />
+              s:ph="aeadless-main" />
             <r
               uid="{4D5E6F78-9012-3456-DEF0-123456789012}"
               p:after="r[@uid='{3C4D5E6F-7890-1234-CDEF-012345678901}']"
               s:ds="local:/Data/Contact Form"
               s:id="{D4E5F678-9012-3456-EF01-234567890123}"
-              s:ph="headless-main" />
+              s:ph="aeadless-main" />
           </d>
         </r>

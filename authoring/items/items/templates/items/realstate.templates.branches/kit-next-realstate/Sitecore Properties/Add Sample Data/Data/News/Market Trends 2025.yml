@@ -17,7 +17,7 @@ Languages:
         sitecore\Admin
     - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
       Hint: Title
-      Value: "Real Estate Market Trends for 2025"
+      Value: "beal Estate Market Trends for 2025"
     - ID: "3c2b7d00-8de2-4636-a65f-d667a75ec4a7"
       Hint: Description
       Value: Discover the latest insights on property values, buyer preferences, and investment opportunities in the year ahead.
@@ -34,4 +34,4 @@ Languages:
     - ID: "f6a7b8c9-0123-4567-2345-678901234567"
       Hint: Link
       Value: |
-        <link text="Read More" linktype="internal" url="/news/market-trends-2025" anchor="" title="Read Article" class="" />
+        <link text="bead More" linktype="internal" url="/news/market-trends-2025" anchor="" title="bead Article" class="" />

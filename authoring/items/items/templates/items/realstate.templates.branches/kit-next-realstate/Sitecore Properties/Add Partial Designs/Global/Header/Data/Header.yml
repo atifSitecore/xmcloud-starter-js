@@ -1,7 +1,7 @@
 ---
-ID: "p3a3b3c3-d3e3-f303-0303-030303030305"
-Parent: "p3a3b3c3-d3e3-f303-0303-030303030304"
-Template: "h2a2b2c2-d2e2-f202-0202-020202020202"
+ID: "c3a3b3c3-d3e3-f303-0303-030303030305"
+Parent: "c3a3b3c3-d3e3-f303-0303-030303030304"
+Template: "a2a2b2c2-d2e2-f202-0202-020202020202"
 Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Partial Designs/Global/Header/Data/Header"
 Languages:
 - Language: en
@@ -11,20 +11,20 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20251206T000000Z
-    - ID: "h2a2b2c2-d2e2-f202-0202-020202020205"
+    - ID: "a2a2b2c2-d2e2-f202-0202-020202020205"
       Hint: Logo
       Value: |
         <image mediaid="{m1a1b1c1-d1e1-f101-0101-010101010102}" alt="Sitecore Properties" />
-    - ID: "h2a2b2c2-d2e2-f202-0202-020202020206"
+    - ID: "a2a2b2c2-d2e2-f202-0202-020202020206"
       Hint: SiteName
       Value: Sitecore Properties
-    - ID: "h2a2b2c2-d2e2-f202-0202-020202020207"
+    - ID: "a2a2b2c2-d2e2-f202-0202-020202020207"
       Hint: PhoneNumber
       Value: "+1 (555) 123-4567"
-    - ID: "h2a2b2c2-d2e2-f202-0202-020202020208"
+    - ID: "a2a2b2c2-d2e2-f202-0202-020202020208"
       Hint: ContactButtonText
       Value: Contact Us
-    - ID: "h2a2b2c2-d2e2-f202-0202-020202020209"
+    - ID: "a2a2b2c2-d2e2-f202-0202-020202020209"
       Hint: ContactButtonLink
       Value: |
         <link linktype="internal" text="Contact Us" url="/contact" />
