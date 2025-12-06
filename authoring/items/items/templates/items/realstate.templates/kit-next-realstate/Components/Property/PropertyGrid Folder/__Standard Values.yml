@@ -1,0 +1,17 @@
+---
+ID: "e5678901-bcde-f012-5678-901abcdef024"
+Parent: "e5678901-bcde-f012-5678-901abcdef023"
+Template: "e5678901-bcde-f012-5678-901abcdef023"
+Path: "/sitecore/templates/Project/kit-next-realstate/Components/Property/PropertyGrid Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{c3d4e5f6-a7b8-9012-cdef-123456789012}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

@@ -1,0 +1,29 @@
+---
+ID: "41234567-cdef-0123-cdef-012345678101"
+Parent: "d9b71f23-a5d9-4987-b543-29a1d38c72e5"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: "/sitecore/content/sitecore templates/Site Module Definitions/Sitecore Properties/Site Actions/Create Data Folders"
+SharedFields:
+- ID: "0ced9dcd-0fde-44a8-a2f6-c2c0e4a1e58c"
+  Hint: Branch
+  Value: "{d4567890-5678-9abc-5678-9abcdef01094}"
+- ID: "2e7a2619-c7e3-4ac4-8cf4-afe893d8e9c8"
+  Hint: Location
+  Value: "{BA2F959D-A614-4C92-8B57-F1FC1A323ABE}"
+- ID: "40eb5132-e9fb-4e4a-a0a9-12b53c616cf2"
+  Hint: Run After
+  Value: 
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/folder_add.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "6c4c25bb-22c4-4949-8d70-78db9e483a69"
+      Hint: Name
+      Value: "Data Folders"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

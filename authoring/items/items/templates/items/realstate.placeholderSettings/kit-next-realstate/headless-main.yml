@@ -1,0 +1,27 @@
+---
+ID: "14567890-4567-89ab-4567-89abcdef0093"
+Parent: "e1f2a3b4-c5d6-7890-ef12-345678901234"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/kit-next-realstate/headless-main"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: headless-main
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: |
+    {56789012-def0-1234-5678-9abcdef01234}
+    {67890123-ef01-2345-6789-abcdef012345}
+    {78901234-f012-3456-789a-bcdef0123456}
+    {89012345-0123-4567-89ab-cdef01234567}
+    {90123456-1234-5678-9abc-def012345678}
+    {01234567-2345-6789-abcd-ef0123456789}
+    {12345678-3456-789a-bcde-f01234567890}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

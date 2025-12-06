@@ -1,0 +1,17 @@
+---
+ID: "e1234567-1234-5678-1234-567abcdef090"
+Parent: "e1234567-1234-5678-1234-567abcdef089"
+Template: "e1234567-1234-5678-1234-567abcdef089"
+Path: "/sitecore/templates/Project/kit-next-realstate/Components/Global Elements/Footer Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{a3a3b3c3-d3e3-f303-0303-030303030303}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

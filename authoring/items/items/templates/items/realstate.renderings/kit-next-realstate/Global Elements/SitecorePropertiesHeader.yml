@@ -10,15 +10,12 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Office/32x32/window_header.png
-- ID: "1a7c85e5-dc0b-4b1c-9dac-34e4f8c7ef01"
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Location
-  Value: ./Data
-- ID: "7d3acecc-a0e4-4f24-a3a1-3f765e5a0fd0"
-  Hint: MvcParameters Template
-  Value: 
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='Header Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Header Folder']"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Template
-  Value: "{h2a2b2c2-d2e2-f202-0202-020202020202}"
+  Value: "{a2a2b2c2-d2e2-f202-0202-020202020202}"
 Languages:
 - Language: en
   Versions:

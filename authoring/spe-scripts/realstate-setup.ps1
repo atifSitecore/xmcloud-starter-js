@@ -2,6 +2,7 @@ Import-Function Get-ItemByIdSafe
 Import-Function Update-PageTemplate
 Import-Function Update-TemplateInsertOptions
 Import-Function Update-LinkField
+Import-Function Add-Rendering
 
 function Invoke-ModuleScriptBody {
     [CmdletBinding()]
@@ -26,52 +27,67 @@ function Invoke-ModuleScriptBody {
         $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
         Write-Verbose "My site: $sitePath"
 
-        # Create Data folders for Real Estate components
+        # Create Data folders for Real Estate components using proper folder templates
         Write-Verbose "Creating Data folders for Real Estate components"
         $dataFolder = Get-Item -Path "$sitePath/Data" -Language $Site.Language
         
         if ($dataFolder) {
+            # Create folders using the correct folder templates
+            $propertyHeroFolderTemplate = "{f6789012-cdef-0123-6789-012abcdef034}"
+            $propertyCardFolderTemplate = "{d4567890-abcd-ef01-4567-890abcdef012}"
+            $propertyGridFolderTemplate = "{e5678901-bcde-f012-5678-901abcdef023}"
+            $communityCardFolderTemplate = "{a7890123-def0-1234-7890-123abcdef045}"
+            $communityShowcaseFolderTemplate = "{b8901234-ef01-2345-8901-234abcdef056}"
+            $newsCardFolderTemplate = "{c9012345-f012-3456-9012-345abcdef067}"
+            $headerFolderTemplate = "{d0123456-0123-4567-0123-456abcdef078}"
+            $footerFolderTemplate = "{e1234567-1234-5678-1234-567abcdef089}"
+            
             # Property Hero Folder
-            $propertyHeroFolderTemplate = "{0E251B62-6581-4A2D-B0E3-A7F7B4F6E2E1}"
-            if (-not (Test-Path "$sitePath/Data/Property Heroes")) {
-                New-Item -Path "$sitePath/Data" -Name "Property Heroes" -ItemType "Common/Folder"
-                Write-Verbose "Created Property Heroes folder"
+            if (-not (Test-Path "$sitePath/Data/Home Page Hero")) {
+                New-Item -Path "$sitePath/Data" -Name "Home Page Hero" -ItemType $propertyHeroFolderTemplate
+                Write-Verbose "Created Home Page Hero folder"
             }
             
             # Property Card Folder
             if (-not (Test-Path "$sitePath/Data/Properties")) {
-                New-Item -Path "$sitePath/Data" -Name "Properties" -ItemType "Common/Folder"
+                New-Item -Path "$sitePath/Data" -Name "Properties" -ItemType $propertyCardFolderTemplate
                 Write-Verbose "Created Properties folder"
             }
             
             # Property Grid Folder
             if (-not (Test-Path "$sitePath/Data/Property Grids")) {
-                New-Item -Path "$sitePath/Data" -Name "Property Grids" -ItemType "Common/Folder"
+                New-Item -Path "$sitePath/Data" -Name "Property Grids" -ItemType $propertyGridFolderTemplate
                 Write-Verbose "Created Property Grids folder"
             }
             
             # Community Card Folder
             if (-not (Test-Path "$sitePath/Data/Communities")) {
-                New-Item -Path "$sitePath/Data" -Name "Communities" -ItemType "Common/Folder"
+                New-Item -Path "$sitePath/Data" -Name "Communities" -ItemType $communityCardFolderTemplate
                 Write-Verbose "Created Communities folder"
             }
             
             # Community Showcase Folder
             if (-not (Test-Path "$sitePath/Data/Community Showcases")) {
-                New-Item -Path "$sitePath/Data" -Name "Community Showcases" -ItemType "Common/Folder"
+                New-Item -Path "$sitePath/Data" -Name "Community Showcases" -ItemType $communityShowcaseFolderTemplate
                 Write-Verbose "Created Community Showcases folder"
             }
             
             # News Card Folder
             if (-not (Test-Path "$sitePath/Data/News")) {
-                New-Item -Path "$sitePath/Data" -Name "News" -ItemType "Common/Folder"
+                New-Item -Path "$sitePath/Data" -Name "News" -ItemType $newsCardFolderTemplate
                 Write-Verbose "Created News folder"
             }
             
-            # Property Enquiry Form Folder
-            if (-not (Test-Path "$sitePath/Data/Enquiry Forms")) {
-                New-Item -Path "$sitePath/Data" -Name "Enquiry Forms" -ItemType "Common/Folder"
-                Write-Verbose "Created Enquiry Forms folder"
+            # Header Folder
+            if (-not (Test-Path "$sitePath/Data/Headers")) {
+                New-Item -Path "$sitePath/Data" -Name "Headers" -ItemType $headerFolderTemplate
+                Write-Verbose "Created Headers folder"
+            }
+            
+            # Footer Folder
+            if (-not (Test-Path "$sitePath/Data/Footers")) {
+                New-Item -Path "$sitePath/Data" -Name "Footers" -ItemType $footerFolderTemplate
+                Write-Verbose "Created Footers folder"
             }
         }
 
@@ -88,6 +104,8 @@ function Invoke-ModuleScriptBody {
         $communityShowcaseRendering = Get-Item -Path "$realstateRenderingsPath/Community/CommunityShowcase" -ErrorAction SilentlyContinue
         $newsCardRendering = Get-Item -Path "$realstateRenderingsPath/News/NewsCard" -ErrorAction SilentlyContinue
         $propertyEnquiryFormRendering = Get-Item -Path "$realstateRenderingsPath/Forms/PropertyEnquiryForm" -ErrorAction SilentlyContinue
+        $headerRendering = Get-Item -Path "$realstateRenderingsPath/Global Elements/SitecorePropertiesHeader" -ErrorAction SilentlyContinue
+        $footerRendering = Get-Item -Path "$realstateRenderingsPath/Global Elements/SitecorePropertiesFooter" -ErrorAction SilentlyContinue
         
         Write-Verbose "Real Estate site setup completed successfully"
     }

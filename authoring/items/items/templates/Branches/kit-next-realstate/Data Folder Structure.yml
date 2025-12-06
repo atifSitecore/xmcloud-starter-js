@@ -1,0 +1,17 @@
+---
+ID: "d4567890-5678-9abc-5678-9abcdef01094"
+Parent: "b0e7e498-b3a6-4c8e-a9d4-40c4e0fd2a32"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Data Folder Structure"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/folder.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

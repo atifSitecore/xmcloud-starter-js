@@ -1,0 +1,17 @@
+---
+ID: "30123456-bcde-f012-bcde-f01234567100"
+Parent: "d4567890-5678-9abc-5678-9abcdef01094"
+Template: "e1234567-1234-5678-1234-567abcdef089"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Data Folder Structure/$name/Footers"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/folder_network.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

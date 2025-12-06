@@ -15,7 +15,7 @@ SharedFields:
   Value: "/sitecore/templates/Project/kit-next-realstate/Components/Property/PropertyCard"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "query:$site/*[@@name='Data']/*[@@templatename='Property Card Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Property Card Folder']"
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='PropertyCard Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='PropertyCard Folder']"
 - ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
   Hint: OtherProperties
   Value: IsRenderingsWithDynamicPlaceholders=true

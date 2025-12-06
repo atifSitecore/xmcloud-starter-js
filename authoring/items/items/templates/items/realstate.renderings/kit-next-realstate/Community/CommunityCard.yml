@@ -15,7 +15,7 @@ SharedFields:
   Value: "/sitecore/templates/Project/kit-next-realstate/Components/Community/CommunityCard"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "query:$site/*[@@name='Data']/*[@@templatename='Community Card Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Community Card Folder']"
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='CommunityCard Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='CommunityCard Folder']"
 - ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
   Hint: OtherProperties
   Value: IsRenderingsWithDynamicPlaceholders=true

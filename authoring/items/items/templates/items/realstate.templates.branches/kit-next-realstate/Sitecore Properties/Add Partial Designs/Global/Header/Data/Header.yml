@@ -14,7 +14,7 @@ Languages:
     - ID: "a2a2b2c2-d2e2-f202-0202-020202020205"
       Hint: Logo
       Value: |
-        <image mediaid="{m1a1b1c1-d1e1-f101-0101-010101010102}" alt="Sitecore Properties" />
+        <image mediaid="{01a1b1c1-d1e1-f101-0101-010101010102}" alt="Sitecore Properties" />
     - ID: "a2a2b2c2-d2e2-f202-0202-020202020206"
       Hint: SiteName
       Value: Sitecore Properties

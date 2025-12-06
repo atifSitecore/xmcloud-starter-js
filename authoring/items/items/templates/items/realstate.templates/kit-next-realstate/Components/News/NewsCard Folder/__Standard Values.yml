@@ -1,0 +1,17 @@
+---
+ID: "c9012345-f012-3456-9012-345abcdef068"
+Parent: "c9012345-f012-3456-9012-345abcdef067"
+Template: "c9012345-f012-3456-9012-345abcdef067"
+Path: "/sitecore/templates/Project/kit-next-realstate/Components/News/NewsCard Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{f6a7b8c9-d0e1-2345-f012-345678901234}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z

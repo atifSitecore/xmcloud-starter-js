@@ -16,32 +16,33 @@ SharedFields:
     
         begin {
             Write-Log "Kit Next Realstate - Post Site Setup Script" -Log "INFO"
-            Write-Verbose "Kit Next Realstate - Post Site Setup Script"
         }
         
         process {
             [Item]$SiteLocation = $Model.SiteLocation
             $sitePath = "$($SiteLocation.Paths.Path)/$($Model.SiteName)"
+            $Site = Get-Item -Path $sitePath
             
             Write-Log "Setting up site at: $sitePath" -Log "INFO"
     
-            # Configure the rendering host for kit-next-realstate
+            # Configure the rendering host and start item
             Write-Log "Configuring rendering host" -Log "INFO"
             $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($Model.SiteName)" -ErrorAction SilentlyContinue
-            if ($siteGrouping) {
-                $siteGrouping.RenderingHost = "kit-next-realstate"
-                Write-Log "Set rendering host to kit-next-realstate" -Log "INFO"
+            $homeItem = Get-Item -Path "$sitePath/Home" -ErrorAction SilentlyContinue
+            
+            if ($siteGrouping -and $homeItem) {
+                $siteGrouping.Editing.BeginEdit()
+                $siteGrouping["RenderingHost"] = "kit-next-realstate"
+                $siteGrouping["StartItem"] = $homeItem.ID
+                $siteGrouping.Editing.EndEdit()
+                Write-Log "Configured rendering host and start item" -Log "INFO"
             }
             
-            # Set the start item to Home
-            $homeItem = Get-Item -Path "$sitePath/Home" -ErrorAction SilentlyContinue
-            if ($homeItem -and $siteGrouping) {
-                $siteGrouping.StartItem = $homeItem.ID
-                Write-Log "Set start item to Home" -Log "INFO"
-            }
+            # Get base page template ID
+            $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
             
             # Create Page Design and link partial designs
-            Write-Log "Creating Page Designs" -Log "INFO"
+            Write-Log "Creating Page Design" -Log "INFO"
             $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -ErrorAction SilentlyContinue
             $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -ErrorAction SilentlyContinue
             
@@ -51,11 +52,97 @@ SharedFields:
                 
                 if (-not $defaultPageDesign) {
                     $defaultPageDesign = New-Item -Path $pageDesignsPath -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
-                    Write-Log "Created Default Page Design" -Log "INFO"
                 }
                 
-                $defaultPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
-                Write-Log "Linked Header and Footer to Default Page Design" -Log "INFO"
+                $defaultPageDesign.Editing.BeginEdit()
+                $defaultPageDesign["PartialDesigns"] = "$($headerPartial.ID)|$($footerPartial.ID)"
+                $defaultPageDesign.Editing.EndEdit()
+                Write-Log "Created Default Page Design with Header and Footer" -Log "INFO"
+                
+                # Set up templates mapping so pages automatically get the page design
+                $pageDesigns = Get-Item -Path $pageDesignsPath -ErrorAction SilentlyContinue
+                if ($pageDesigns) {
+                    $map = [Sitecore.Text.UrlString]::new()
+                    $map[$basePageTemplateId] = "$($defaultPageDesign.ID)"
+                    
+                    $pageDesigns.Editing.BeginEdit()
+                    $pageDesigns["TemplatesMapping"] = [System.Web.HttpUtility]::UrlEncode($map.toString())
+                    $pageDesigns.Editing.EndEdit()
+                    Write-Log "Set templates mapping for Page template" -Log "INFO"
+                }
+            }
+            
+            # Add renderings to Home page
+            Write-Log "Adding renderings to Home page" -Log "INFO"
+            
+            if ($homeItem) {
+                # Get rendering definitions
+                $renderingPropertyHero = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyHero' -ErrorAction SilentlyContinue
+                $renderingPropertyGrid = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyGrid' -ErrorAction SilentlyContinue
+                $renderingCommunityShowcase = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Community/CommunityShowcase' -ErrorAction SilentlyContinue
+                $renderingNewsCard = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/News/NewsCard' -ErrorAction SilentlyContinue
+                
+                # Create rendering instances
+                if ($renderingPropertyHero) {
+                    $heroDefinition = $renderingPropertyHero | New-Rendering
+                    Add-Rendering -Item $homeItem -PlaceHolder "headless-main" -Instance $heroDefinition -DataSource "$sitePath/Data/Home Page Hero" -FinalLayout
+                    Write-Log "Added PropertyHero rendering to Home page" -Log "INFO"
+                }
+                
+                if ($renderingPropertyGrid) {
+                    $gridDefinition = $renderingPropertyGrid | New-Rendering
+                    Add-Rendering -Item $homeItem -PlaceHolder "headless-main" -Instance $gridDefinition -DataSource "$sitePath/Data/Featured Properties Grid" -FinalLayout
+                    Write-Log "Added PropertyGrid rendering to Home page" -Log "INFO"
+                }
+                
+                if ($renderingCommunityShowcase) {
+                    $communityDefinition = $renderingCommunityShowcase | New-Rendering
+                    Add-Rendering -Item $homeItem -PlaceHolder "headless-main" -Instance $communityDefinition -DataSource "$sitePath/Data/Community Showcase" -FinalLayout
+                    Write-Log "Added CommunityShowcase rendering to Home page" -Log "INFO"
+                }
+                
+                Write-Log "Completed adding renderings to Home page" -Log "INFO"
+            }
+            
+            # Add renderings to Properties page
+            Write-Log "Adding renderings to Properties page" -Log "INFO"
+            $propertiesPage = Get-Item -Path "$sitePath/Home/Properties" -ErrorAction SilentlyContinue
+            
+            if ($propertiesPage -and $renderingPropertyGrid) {
+                $gridDefinition = $renderingPropertyGrid | New-Rendering
+                Add-Rendering -Item $propertiesPage -PlaceHolder "headless-main" -Instance $gridDefinition -DataSource "$sitePath/Data/Properties" -FinalLayout
+                Write-Log "Added PropertyGrid rendering to Properties page" -Log "INFO"
+            }
+            
+            # Add renderings to Communities page
+            Write-Log "Adding renderings to Communities page" -Log "INFO"
+            $communitiesPage = Get-Item -Path "$sitePath/Home/Communities" -ErrorAction SilentlyContinue
+            
+            if ($communitiesPage -and $renderingCommunityShowcase) {
+                $communityDefinition = $renderingCommunityShowcase | New-Rendering
+                Add-Rendering -Item $communitiesPage -PlaceHolder "headless-main" -Instance $communityDefinition -DataSource "$sitePath/Data/Communities" -FinalLayout
+                Write-Log "Added CommunityShowcase rendering to Communities page" -Log "INFO"
+            }
+            
+            # Add renderings to News page
+            Write-Log "Adding renderings to News page" -Log "INFO"
+            $newsPage = Get-Item -Path "$sitePath/Home/News" -ErrorAction SilentlyContinue
+            
+            if ($newsPage -and $renderingNewsCard) {
+                $newsDefinition = $renderingNewsCard | New-Rendering
+                Add-Rendering -Item $newsPage -PlaceHolder "headless-main" -Instance $newsDefinition -DataSource "$sitePath/Data/News" -FinalLayout
+                Write-Log "Added NewsCard rendering to News page" -Log "INFO"
+            }
+            
+            # Add form to Contact page
+            Write-Log "Adding renderings to Contact page" -Log "INFO"
+            $contactPage = Get-Item -Path "$sitePath/Home/Contact" -ErrorAction SilentlyContinue
+            $renderingEnquiryForm = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Forms/PropertyEnquiryForm' -ErrorAction SilentlyContinue
+            
+            if ($contactPage -and $renderingEnquiryForm) {
+                $formDefinition = $renderingEnquiryForm | New-Rendering
+                Add-Rendering -Item $contactPage -PlaceHolder "headless-main" -Instance $formDefinition -DataSource "$sitePath/Data/Contact Form" -FinalLayout
+                Write-Log "Added PropertyEnquiryForm rendering to Contact page" -Log "INFO"
             }
             
             Write-Log "Real Estate site setup completed" -Log "INFO"

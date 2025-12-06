@@ -28,9 +28,9 @@ Languages:
             <r
               uid="{BB222222-2222-2222-2222-222222222222}"
               s:ds="local:/Data/Footer"
-              s:id="{r3a3b3c3-d3e3-f303-0303-030303030303}"
+              s:id="{b3a3b3c3-d3e3-f303-0303-030303030303}"
               s:par="FieldNames&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-              s:ph="aeadless-footer" />
+              s:ph="headless-footer" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"

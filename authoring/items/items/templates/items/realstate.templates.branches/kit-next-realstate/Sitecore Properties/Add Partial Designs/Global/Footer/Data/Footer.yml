@@ -13,7 +13,7 @@ Languages:
       Value: 20251206T000000Z
     - ID: "f3a3b3c3-0001-f303-0303-030303030303"
       Hint: Logo
-      Value: "<image mediaid='{m1a1b1c1-d1e1-f101-0101-010101010107}' />"
+      Value: "<image mediaid='{01a1b1c1-d1e1-f101-0101-010101010107}' />"
     - ID: "f3a3b3c3-0002-f303-0303-030303030303"
       Hint: SiteName
       Value: "Sitecore Properties"
