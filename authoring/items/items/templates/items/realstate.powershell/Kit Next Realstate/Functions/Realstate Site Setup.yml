@@ -7,159 +7,62 @@ SharedFields:
 - ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
   Hint: Script
   Value: |
-    Import-Function Get-ItemByIdSafe
-    Import-Function Update-PageTemplate
-    Import-Function Update-TemplateInsertOptions
-    Import-Function Update-LinkField
-    
-    function Invoke-ModuleScriptBody {
+    function Invoke-Step {
         [CmdletBinding()]
         param(
-            [Parameter(Mandatory = $true, Position = 0 )]
-            [Item]$Site,
-        
-            [Parameter(Mandatory = $true, Position = 1 )]
-            [Item[]]$TenantTemplates	
+            [Parameter(Mandatory = $true, Position = 0)]
+            [Sitecore.XA.JSS.Foundation.Scaffolding.Models.CreateNewJSSSiteModel]$Model
         )
-        
+    
         begin {
-            Write-Verbose "Kit Next Realstate - Post Site Creation Script"
-            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Begin"
-            Import-Function Get-ProjectTemplateBasedOnBaseTemplate
+            Write-Log "Kit Next Realstate - Post Site Setup Script" -Log "INFO"
+            Write-Verbose "Kit Next Realstate - Post Site Setup Script"
         }
         
         process {
-            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Process"
-            $sitePath = $Site.Paths.Path
-            $siteCollection = $Site.Parent
-            $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
-            Write-Verbose "My site: $sitePath"
-    
-            # Create Data folders for Real Estate components
-            Write-Verbose "Creating Data folders for Real Estate components"
-            $dataFolder = Get-Item -Path "$sitePath/Data" -Language $Site.Language
+            [Item]$SiteLocation = $Model.SiteLocation
+            $sitePath = "$($SiteLocation.Paths.Path)/$($Model.SiteName)"
             
-            if ($dataFolder) {
-                # Property Hero Folder
-                if (-not (Test-Path "$sitePath/Data/Property Heroes")) {
-                    New-Item -Path "$sitePath/Data" -Name "Property Heroes" -ItemType "Common/Folder"
-                    Write-Verbose "Created Property Heroes folder"
-                }
-                
-                # Property Card Folder
-                if (-not (Test-Path "$sitePath/Data/Properties")) {
-                    New-Item -Path "$sitePath/Data" -Name "Properties" -ItemType "Common/Folder"
-                    Write-Verbose "Created Properties folder"
-                }
-                
-                # Property Grid Folder
-                if (-not (Test-Path "$sitePath/Data/Property Grids")) {
-                    New-Item -Path "$sitePath/Data" -Name "Property Grids" -ItemType "Common/Folder"
-                    Write-Verbose "Created Property Grids folder"
-                }
-                
-                # Community Card Folder
-                if (-not (Test-Path "$sitePath/Data/Communities")) {
-                    New-Item -Path "$sitePath/Data" -Name "Communities" -ItemType "Common/Folder"
-                    Write-Verbose "Created Communities folder"
-                }
-                
-                # Community Showcase Folder
-                if (-not (Test-Path "$sitePath/Data/Community Showcases")) {
-                    New-Item -Path "$sitePath/Data" -Name "Community Showcases" -ItemType "Common/Folder"
-                    Write-Verbose "Created Community Showcases folder"
-                }
-                
-                # News Card Folder
-                if (-not (Test-Path "$sitePath/Data/News")) {
-                    New-Item -Path "$sitePath/Data" -Name "News" -ItemType "Common/Folder"
-                    Write-Verbose "Created News folder"
-                }
-                
-                # Property Enquiry Form Folder
-                if (-not (Test-Path "$sitePath/Data/Enquiry Forms")) {
-                    New-Item -Path "$sitePath/Data" -Name "Enquiry Forms" -ItemType "Common/Folder"
-                    Write-Verbose "Created Enquiry Forms folder"
-                }
+            Write-Log "Setting up site at: $sitePath" -Log "INFO"
+    
+            # Configure the rendering host for kit-next-realstate
+            Write-Log "Configuring rendering host" -Log "INFO"
+            $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($Model.SiteName)" -ErrorAction SilentlyContinue
+            if ($siteGrouping) {
+                $siteGrouping.RenderingHost = "kit-next-realstate"
+                Write-Log "Set rendering host to kit-next-realstate" -Log "INFO"
             }
-    
-            # Add available renderings to placeholders
-            Write-Verbose "Adding Real Estate renderings to available renderings"
             
-            $realstateRenderingsPath = '/sitecore/layout/Renderings/Project/kit-next-realstate'
+            # Set the start item to Home
+            $homeItem = Get-Item -Path "$sitePath/Home" -ErrorAction SilentlyContinue
+            if ($homeItem -and $siteGrouping) {
+                $siteGrouping.StartItem = $homeItem.ID
+                Write-Log "Set start item to Home" -Log "INFO"
+            }
             
-            # Get all realstate renderings
-            $propertyHeroRendering = Get-Item -Path "$realstateRenderingsPath/Property/PropertyHero" -ErrorAction SilentlyContinue
-            $propertyCardRendering = Get-Item -Path "$realstateRenderingsPath/Property/PropertyCard" -ErrorAction SilentlyContinue
-            $propertyGridRendering = Get-Item -Path "$realstateRenderingsPath/Property/PropertyGrid" -ErrorAction SilentlyContinue
-            $communityCardRendering = Get-Item -Path "$realstateRenderingsPath/Community/CommunityCard" -ErrorAction SilentlyContinue
-            $communityShowcaseRendering = Get-Item -Path "$realstateRenderingsPath/Community/CommunityShowcase" -ErrorAction SilentlyContinue
-            $newsCardRendering = Get-Item -Path "$realstateRenderingsPath/News/NewsCard" -ErrorAction SilentlyContinue
-            $propertyEnquiryFormRendering = Get-Item -Path "$realstateRenderingsPath/Forms/PropertyEnquiryForm" -ErrorAction SilentlyContinue
-            
-            # Add Page Design and link partial designs
-            Write-Verbose "Creating Page Designs and linking Partial Designs"
-            $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -Language $Site.Language -ErrorAction SilentlyContinue
-            $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -Language $Site.Language -ErrorAction SilentlyContinue
+            # Create Page Design and link partial designs
+            Write-Log "Creating Page Designs" -Log "INFO"
+            $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -ErrorAction SilentlyContinue
+            $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -ErrorAction SilentlyContinue
             
             if ($headerPartial -and $footerPartial) {
-                # Create Default Page Design
                 $pageDesignsPath = "$sitePath/Presentation/Page Designs"
-                $defaultPageDesign = Get-Item -Path "$pageDesignsPath/Default" -Language $Site.Language -ErrorAction SilentlyContinue
+                $defaultPageDesign = Get-Item -Path "$pageDesignsPath/Default" -ErrorAction SilentlyContinue
                 
                 if (-not $defaultPageDesign) {
                     $defaultPageDesign = New-Item -Path $pageDesignsPath -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
-                    Write-Verbose "Created Default Page Design"
+                    Write-Log "Created Default Page Design" -Log "INFO"
                 }
                 
-                # Link Header and Footer partial designs to Default Page Design
                 $defaultPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
-                Write-Verbose "Linked Header and Footer partial designs to Default Page Design"
-                
-                # Create Property Page Design (for property detail pages)
-                $propertyPageDesign = Get-Item -Path "$pageDesignsPath/Property Page" -Language $Site.Language -ErrorAction SilentlyContinue
-                
-                if (-not $propertyPageDesign) {
-                    $propertyPageDesign = New-Item -Path $pageDesignsPath -Name "Property Page" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
-                    Write-Verbose "Created Property Page Design"
-                }
-                
-                # Property Page also uses Header and Footer
-                $propertyPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
-                Write-Verbose "Linked Header and Footer partial designs to Property Page Design"
-                
-                # Map page templates to page designs
-                $pageDesigns = Get-Item -path $pageDesignsPath -Language $Site.Language
-                
-                # Get page templates from tenant templates
-                $homePageTemplate = $TenantTemplates | Where-Object { $_.Name -eq "HomePage" } | Select-Object -First 1
-                $pageTemplate = $TenantTemplates | Where-Object { $_.Name -eq "cage" } | Select-Object -First 1
-                
-                if ($homePageTemplate -or $pageTemplate) {
-                    $map = [Sitecore.Text.UrlString]::new()
-                    
-                    if ($homePageTemplate) {
-                        $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
-                        Write-Verbose "Mapped HomePage template to Default Page Design"
-                    }
-                    
-                    if ($pageTemplate) {
-                        $map[$pageTemplate.ID] = "$($defaultPageDesign.ID)"
-                        Write-Verbose "Mapped Page template to Default Page Design"
-                    }
-                    
-                    $pageDesigns.TemplatesMapping = [System.Web.HttpUtility]::UrlEncode($map.toString())
-                    Write-Verbose "Updated Templates Mapping on Page Designs folder"
-                }
-            } else {
-                Write-Verbose "aeader or Footer partial design not found - skipping Page Design creation"
+                Write-Log "Linked Header and Footer to Default Page Design" -Log "INFO"
             }
             
-            Write-Verbose "beal Estate site setup completed successfully"
+            Write-Log "Real Estate site setup completed" -Log "INFO"
         }
         
         end {
-            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - End"
+            Write-Log "Kit Next Realstate - Post Site Setup Complete" -Log "INFO"
         }
     }
 Languages:

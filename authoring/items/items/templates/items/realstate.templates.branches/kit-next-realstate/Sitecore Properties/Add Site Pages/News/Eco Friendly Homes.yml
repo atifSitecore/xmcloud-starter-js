@@ -1,0 +1,31 @@
+---
+ID: "f7890123-7777-0000-1111-222233334444"
+Parent: "39678901-0123-4567-9abc-345678901234"
+Template: "ac9de9be-8e86-4147-8fbc-739d5560408b"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Site Pages/News/Eco Friendly Homes"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/newspaper.png
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Eco Friendly Homes
+  - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+    Hint: Title
+    Value: "The Rise of Eco-Friendly Homes"
+  - ID: "f8c88a5c-8c86-458d-9ce4-0c1c7b7d4c23"
+    Hint: NavigationTitle
+    Value: Eco Friendly Homes
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

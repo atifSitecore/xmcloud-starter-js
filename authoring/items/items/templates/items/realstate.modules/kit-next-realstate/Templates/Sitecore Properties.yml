@@ -39,19 +39,15 @@ SharedFields:
     {AC1A27CA-6BF3-4D23-915E-668326D52CF1}
     {D7EEAF4D-2B58-4029-B141-844221565EF0}
     {A2C5D6E7-F8A9-0123-4EF0-567890123456}
-- ID: "e3fd63e1-3e80-43e6-a1e3-4e4427b35239"
-  Hint: Thumbnail
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
   Value: |
-    <image mediaid="{C3D4E5F6-7890-1234-CDEF-123456789012}" />
-- ID: "ff1f9e6a-1deb-49df-af79-c1e0b50ca130"
-  Hint: Site Branch
-  Value: "{B1234567-89AB-CDEF-1234-567890ABCDEF}"
+    <image mediaid="{9F789012-DEF0-1234-9ABC-DEF012345678}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f4e5d6c7-b8a9-0123-4def-567890123456"
 Languages:
 - Language: en
-  Fields:
-  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
-    Hint: __Display name
-    Value: Sitecore Properties
   Versions:
   - Version: 1
     Fields:
@@ -62,9 +58,23 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "c202067e-7fab-4606-afb4-e76df2185ddc"
+    - ID: "82e64b52-0b8a-4a38-8c78-530c5493814e"
       Hint: Name
       Value: Sitecore Properties
-    - ID: "dfd65ed9-67ee-4d3a-95ff-7c8e6fc39a46"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+    - ID: "9f437e68-a84d-48ae-8ce1-a3e26c0b5e64"
       Hint: Description
-      Value: A modern real estate website template showcasing properties, communities, and market insights for Sitecore Properties.
+      Value: A modern real estate website template for showcasing properties, communities, and market insights.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251206T000000Z
+    - ID: "da855368-e5f2-4932-ae55-7f8b08a5a205"
+      Hint: Content
+      Value: |
+        [{"name":"Pages","content":"Home, Properties, Communities, News, About, Contact"},{"name":"Components","content":"PropertyHero, PropertyCard, PropertyGrid, CommunityCard, CommunityShowcase, NewsCard"},{"name":"Features","content":"Real Estate Components, Sample Data, Page Designs"}]

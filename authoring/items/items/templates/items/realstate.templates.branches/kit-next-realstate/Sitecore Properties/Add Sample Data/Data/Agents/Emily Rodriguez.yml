@@ -1,0 +1,42 @@
+---
+ID: "a3333333-3333-3333-3333-333333333333"
+Parent: "a1234567-0000-1111-2222-333344445555"
+Template: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a7b"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Sample Data/Data/Agents/Emily Rodriguez"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a81"
+      Hint: Name
+      Value: Emily Rodriguez
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a82"
+      Hint: Title
+      Value: First-Time Buyer Specialist
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a83"
+      Hint: Bio
+      Value: Emily is passionate about helping first-time buyers navigate the home-buying process. Her patience, clear communication, and extensive knowledge of financing options make the experience smooth and enjoyable for her clients.
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a84"
+      Hint: Photo
+      Value: |
+        <image mediaid="{33234567-89AB-CDEF-4567-9AB123456789}" />
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a85"
+      Hint: Email
+      Value: emily.rodriguez@sitecoreproperties.com
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a86"
+      Hint: Phone
+      Value: (555) 345-6789
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a87"
+      Hint: Specialization
+      Value: First-Time Home Buyers
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a88"
+      Hint: YearsExperience
+      Value: "8"

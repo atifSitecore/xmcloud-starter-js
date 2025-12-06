@@ -1,0 +1,42 @@
+---
+ID: "a4444444-4444-4444-4444-444444444444"
+Parent: "a1234567-0000-1111-2222-333344445555"
+Template: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a7b"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Sample Data/Data/Agents/James Thompson"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a81"
+      Hint: Name
+      Value: James Thompson
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a82"
+      Hint: Title
+      Value: Luxury Property Expert
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a83"
+      Hint: Bio
+      Value: James brings 20 years of experience in high-end real estate. His exclusive network and discretion have earned him the trust of celebrities and executives. He handles properties starting at $5 million with exceptional attention to detail.
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a84"
+      Hint: Photo
+      Value: |
+        <image mediaid="{34234567-89AB-CDEF-4567-9AB123456789}" />
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a85"
+      Hint: Email
+      Value: james.thompson@sitecoreproperties.com
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a86"
+      Hint: Phone
+      Value: (555) 456-7890
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a87"
+      Hint: Specialization
+      Value: Ultra-Luxury Estates
+    - ID: "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a88"
+      Hint: YearsExperience
+      Value: "20"
