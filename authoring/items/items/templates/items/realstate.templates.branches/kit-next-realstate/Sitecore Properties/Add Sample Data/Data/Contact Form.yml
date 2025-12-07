@@ -15,15 +15,15 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a10"
       Hint: Title
       Value: "Get in Touch"
-    - ID: "f6a7b8c9-0123-4567-abcd-ef1234567890"
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a20"
       Hint: Subtitle
       Value: "We'd love to hear from you. Fill out the form below and one of our property experts will contact you shortly."
-    - ID: "a7b8c9d0-1234-5678-ef01-234567890123"
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a30"
       Hint: SubmitButtonText
       Value: "Send Message"
-    - ID: "b8c9d0e1-2345-6789-f012-345678901234"
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a40"
       Hint: SuccessMessage
       Value: "Thank you for your enquiry! Our team will get back to you within 24 hours."

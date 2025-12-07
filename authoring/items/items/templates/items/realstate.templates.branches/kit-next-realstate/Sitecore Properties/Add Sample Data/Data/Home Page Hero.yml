@@ -15,39 +15,39 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a1"
       Hint: Title
       Value: "Discover Your Dream Home"
-    - ID: "f6a7b8c9-0123-4567-abcd-ef1234567890"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a2"
       Hint: Subtitle
       Value: "Premium real estate in the most desirable locations"
-    - ID: "3c2b7d00-8de2-4636-a65f-d667a75ec4a7"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a3"
       Hint: Description
       Value: "Sitecore Properties offers an exclusive collection of luxury homes, stunning apartments, and prestigious estates. Let us help you find the perfect place to call home."
-    - ID: "c65eb2cc-503f-48cd-ba69-42c29df106c1"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a4"
       Hint: BackgroundImage
       Value: |
         <image mediaid="{8F678901-CDEF-0123-89AB-DEF567890123}" />
-    - ID: "8a2b3c4d-5e6f-7890-abcd-ef1234567890"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a5"
       Hint: Price
       Value: "From $850,000"
-    - ID: "9b3c4d5e-6f78-9012-bcde-f12345678901"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a6"
       Hint: Location
       Value: "Multiple Locations"
-    - ID: "0c4d5e6f-7890-1234-cdef-123456789012"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a7"
       Hint: Bedrooms
       Value: "3-6"
-    - ID: "1d5e6f78-9012-3456-def0-234567890123"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a8"
       Hint: Bathrooms
       Value: "2-5"
-    - ID: "2e6f7890-1234-5678-ef01-345678901234"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a9"
       Hint: Area
       Value: "2,000 - 8,000 sq ft"
-    - ID: "a2b3c4d5-6789-0123-bcde-f12345678901"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678aa"
       Hint: PrimaryLink
       Value: |
         <link text="Browse Properties" linktype="internal" url="/properties" anchor="" title="View All Properties" class="" />
-    - ID: "b3c4d5e6-789a-1234-cdef-012345678901"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678ab"
       Hint: SecondaryLink
       Value: |
         <link text="Contact Us" linktype="internal" url="/contact" anchor="" title="Get in Touch" class="" />

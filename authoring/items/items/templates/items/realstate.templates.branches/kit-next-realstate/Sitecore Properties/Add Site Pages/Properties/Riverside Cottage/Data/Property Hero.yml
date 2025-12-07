@@ -11,25 +11,25 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20251207T000000Z
-    - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a1"
       Hint: Title
       Value: "Riverside Cottage"
-    - ID: "7a5e5d36-0a3b-4c5e-9f8a-1b2c3d4e5f6a"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a5"
       Hint: Price
       Value: "$825,000"
-    - ID: "8b6f7c8d-1a2b-3c4d-5e6f-7a8b9c0d1e2f"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a3"
       Hint: Description
       Value: |
         <p>Charming riverside living awaits in this cozy cottage. Enjoy morning coffee on the wraparound porch while watching the river flow by, or spend evenings by the outdoor fire pit under starlit skies.</p>
-    - ID: "9c7d8e9f-0a1b-2c3d-4e5f-6a7b8c9d0e1f"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a7"
       Hint: Bedrooms
       Value: "3"
-    - ID: "0d8e9f0a-1b2c-3d4e-5f6a-7b8c9d0e1f2a"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a8"
       Hint: Bathrooms
       Value: "2"
-    - ID: "1e9f0a1b-2c3d-4e5f-6a7b-8c9d0e1f2a3b"
-      Hint: SquareFeet
-      Value: "1,950"
-    - ID: "2f0a1b2c-3d4e-5f6a-7b8c-9d0e1f2a3b4c"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a9"
+      Hint: Area
+      Value: "1,950 sq ft"
+    - ID: "a1b2c3d4-e5f6-7890-abcd-ef12345678a6"
       Hint: Location
       Value: "Asheville, NC"
