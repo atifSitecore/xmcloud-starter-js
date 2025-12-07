@@ -1,24 +1,24 @@
 ---
-ID: "a4c5d6e7-f8a9-0123-4567-890abcdef012"
+ID: "b6d7e8f9-a0b1-2345-6789-0abcdef12345"
 Parent: "a2c5d6e7-f8a9-0123-4ef0-567890123456"
 Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
-Path: /sitecore/system/Settings/Project/kit-next-realstate/Sitecore Properties Setup/Add Home Page Data Folder
+Path: /sitecore/system/Settings/Project/kit-next-realstate/Sitecore Properties Setup/Add Dictionary Items
 SharedFields:
 - ID: "52c91c75-6698-4701-a8a2-242ace59a8d6"
   Hint: Location
-  Value: "{E96B4685-0341-4077-AFCE-BCCE690B3927}"
+  Value: "{8F1C68A0-E85D-47C6-B7A4-B95C4E11D1DD}"
 - ID: "7868e6bc-525c-4fce-ab8a-77da3e09b171"
   Hint: Name
-  Value: Data
+  Value: Dictionary
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 80
+  Value: 150
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "b1b2c3d4-e5f6-7890-abcd-ef1234567891"
+  Value: "b6d7e8f9-a0b1-2345-6789-0abcdef12346"
 - ID: "e62c28f0-9d3b-46e2-8bec-a5e120542499"
   Hint: Template
-  Value: "{E3456789-BCDE-0123-6789-012345678901}"
+  Value: "{F1234567-0123-4567-1234-567890123456}"
 Languages:
 - Language: en
   Versions:

@@ -1,0 +1,21 @@
+---
+ID: "fc567890-3456-7890-4567-890123456789"
+Parent: "fc456789-2345-6789-3456-789012345678"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Enumerations/Enumerations/Property Types"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Property Types
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

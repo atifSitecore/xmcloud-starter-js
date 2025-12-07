@@ -1,0 +1,23 @@
+---
+ID: "fc789012-5678-9012-6789-012345678901"
+Parent: "fc567890-3456-7890-4567-890123456789"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Enumerations/Enumerations/Property Types/Apartment"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "c98fb8cb-23c8-4ad7-a9c2-78f8b283f134"
+      Hint: Title
+      Value: Apartment
+    - ID: "dd98f5fc-7a71-428e-9778-dfd5a6b0ad9c"
+      Hint: Value
+      Value: apartment

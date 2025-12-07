@@ -1,0 +1,53 @@
+---
+ID: "e5678901-def0-1234-8901-234567890123"
+Parent: "e4567890-cdef-0123-7890-123456789012"
+Template: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Home Page Data Folder/Data/Home Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+      Hint: Title
+      Value: "Discover Your Dream Home"
+    - ID: "f6a7b8c9-0123-4567-abcd-ef1234567890"
+      Hint: Subtitle
+      Value: "Premium real estate in the most desirable locations"
+    - ID: "3c2b7d00-8de2-4636-a65f-d667a75ec4a7"
+      Hint: Description
+      Value: "Sitecore Properties offers an exclusive collection of luxury homes, stunning apartments, and prestigious estates. Let us help you find the perfect place to call home."
+    - ID: "c65eb2cc-503f-48cd-ba69-42c29df106c1"
+      Hint: BackgroundImage
+      Value: |
+        <image mediaid="{8F678901-CDEF-0123-89AB-DEF567890123}" />
+    - ID: "8a2b3c4d-5e6f-7890-abcd-ef1234567890"
+      Hint: Price
+      Value: "From $850,000"
+    - ID: "9b3c4d5e-6f78-9012-bcde-f12345678901"
+      Hint: Location
+      Value: "Multiple Locations"
+    - ID: "0c4d5e6f-7890-1234-cdef-123456789012"
+      Hint: Bedrooms
+      Value: "3-6"
+    - ID: "1d5e6f78-9012-3456-def0-234567890123"
+      Hint: Bathrooms
+      Value: "2-5"
+    - ID: "2e6f7890-1234-5678-ef01-345678901234"
+      Hint: Area
+      Value: "2,000 - 8,000 sq ft"
+    - ID: "a2b3c4d5-6789-0123-bcde-f12345678901"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Browse Properties" linktype="internal" url="/properties" anchor="" title="View All Properties" class="" />
+    - ID: "b3c4d5e6-789a-1234-cdef-012345678901"
+      Hint: SecondaryLink
+      Value: |
+        <link text="Contact Us" linktype="internal" url="/contact" anchor="" title="Get in Touch" class="" />
