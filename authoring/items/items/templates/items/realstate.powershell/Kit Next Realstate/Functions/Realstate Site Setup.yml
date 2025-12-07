@@ -143,20 +143,9 @@ SharedFields:
                 Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingCommunityShowcaseDefinition -Parameter @{ "DynamicPlaceholderId" = "4" } -DataSource "local:/Data/Community Highlights" -FinalLayout
             }
     
-            Write-Verbose "Update home page fields"
-            $title = "Sitecore Properties"
-            $shortTitle = "Sitecore Properties"
-    
-            $item."pageTitle" = $title
-            $item."pageShortTitle" = $shortTitle
-            $item."pageHeaderTitle" = $shortTitle
-            $item."pageSummary" = "Discover your dream property with Sitecore Properties"
-    
-            $item."metadataTitle" = $title
-            $item."metadataDescription" = "Premium real estate listings and property management"
-            $item."metadataKeywords" = "real estate, properties, homes, luxury"
-            $item."ogTitle" = $title
-            $item."ogDescription" = "Discover your dream property with Sitecore Properties"
+            # Note: Base SXA templates use "Title" and "NavigationTitle" fields
+            # Field values are already set in branch items, so we skip field updates here
+            # to avoid conflicts with non-existent fields on base templates
     
             Write-Log "Real Estate site setup completed successfully" -Log "INFO"
         }
