@@ -1,0 +1,33 @@
+---
+ID: "b3333333-cccc-dddd-eeee-ffff00001111"
+Parent: "b1234567-1111-2222-3333-444455556600"
+Template: "f2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a8b"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Home Page Data Folder/Data/Testimonials/Maria and Carlos Santos"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "f2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a91"
+      Hint: ClientName
+      Value: Maria & Carlos Santos
+    - ID: "f2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a92"
+      Hint: Quote
+      Value: Emily made buying our first home an absolute joy! She explained every step, helped us find financing, and negotiated a great deal. We couldn't be happier in our new home.
+    - ID: "f2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a93"
+      Hint: Photo
+      Value: |
+        <image mediaid="{43234567-89AB-CDEF-4567-9AB123456789}" />
+    - ID: "f2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a94"
+      Hint: Rating
+      Value: "5"
+    - ID: "f2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a95"
+      Hint: PropertyType
+      Value: First Home

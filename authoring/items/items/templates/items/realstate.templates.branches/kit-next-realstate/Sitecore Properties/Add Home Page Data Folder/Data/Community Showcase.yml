@@ -1,0 +1,26 @@
+---
+ID: "d3012345-abcd-ef01-3456-789012345678"
+Parent: "e4567890-cdef-0123-7890-123456789012"
+Template: "e5f6a7b8-c9d0-1234-ef01-234567890134"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Home Page Data Folder/Data/Community Showcase"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e5f6a7b8-c9d0-1234-ef01-234567890e10"
+      Hint: Title
+      Value: "Our Communities"
+    - ID: "e5f6a7b8-c9d0-1234-ef01-234567890e20"
+      Hint: Subtitle
+      Value: "Find your perfect neighborhood"
+    - ID: "e5f6a7b8-9012-3456-def0-123456789012"
+      Hint: Communities
+      Value: "{4A123456-1234-5678-ABCD-EF0123456789}|{5B234567-2345-6789-BCDE-F01234567890}|{6C345678-3456-789A-CDEF-012345678901}"

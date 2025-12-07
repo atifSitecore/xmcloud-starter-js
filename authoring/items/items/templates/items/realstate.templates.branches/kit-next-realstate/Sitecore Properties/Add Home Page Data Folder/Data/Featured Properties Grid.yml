@@ -1,0 +1,26 @@
+---
+ID: "c2901234-9abc-def0-2345-678901234567"
+Parent: "e4567890-cdef-0123-7890-123456789012"
+Template: "c3d4e5f6-a7b8-9012-cdef-123456789012"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Home Page Data Folder/Data/Featured Properties Grid"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+      Hint: Title
+      Value: "Featured Properties"
+    - ID: "f6a7b8c9-0123-4567-abcd-ef1234567890"
+      Hint: Subtitle
+      Value: "Explore our hand-picked selection of premium homes"
+    - ID: "d4e5f6a7-8901-2345-cdef-012345678901"
+      Hint: Properties
+      Value: "{F5678901-CDEF-0123-5678-9ABCDEF01234}|{06789012-DEF0-1234-6789-ABCDEF012345}|{17890123-EF01-2345-789A-BCDEF0123456}|{28901234-F012-3456-89AB-CDEF01234567}"

@@ -1,0 +1,29 @@
+---
+ID: "e4123456-bcde-f012-4567-890123456789"
+Parent: "e4567890-cdef-0123-7890-123456789012"
+Template: "a7b8c9d0-e1f2-3456-0123-456789012356"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Home Page Data Folder/Data/Contact Form"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251206T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a10"
+      Hint: Title
+      Value: "Get in Touch"
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a20"
+      Hint: Subtitle
+      Value: "We'd love to hear from you. Fill out the form below and one of our property experts will contact you shortly."
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a30"
+      Hint: SubmitButtonText
+      Value: "Send Message"
+    - ID: "a7b8c9d0-e1f2-3456-0123-456789012a40"
+      Hint: SuccessMessage
+      Value: "Thank you for your enquiry! Our team will get back to you within 24 hours."
