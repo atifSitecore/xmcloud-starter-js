@@ -32,14 +32,14 @@ Languages:
             <r
               uid="{A4111111-1111-1111-1111-111111111101}"
               p:before="*"
-              s:ds="local:/Data/Property Hero"
+              s:ds=""
               s:id="{56789012-def0-1234-5678-9abcdef01234}"
               s:par="CSSStyles&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />
             <r
               uid="{A4111111-1111-1111-1111-111111111102}"
               p:after="r[@uid='{A4111111-1111-1111-1111-111111111101}']"
-              s:ds="local:/Data/Property Enquiry"
+              s:ds=""
               s:id="{12345678-3456-789a-bcde-f01234567890}"
               s:par="CSSStyles&amp;DynamicPlaceholderId=2"
               s:ph="headless-main" />

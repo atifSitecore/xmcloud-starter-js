@@ -32,7 +32,6 @@ Languages:
             <r
               uid="{B2111111-1111-1111-1111-111111111101}"
               p:before="*"
-              s:ds="local:/Data/Community Showcase"
               s:id="{90123456-1234-5678-9abc-def012345678}"
               s:par="CSSStyles&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />

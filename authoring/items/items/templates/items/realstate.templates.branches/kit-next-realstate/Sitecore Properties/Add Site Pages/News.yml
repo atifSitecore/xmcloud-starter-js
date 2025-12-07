@@ -32,7 +32,6 @@ Languages:
             <r
               uid="{B3111111-1111-1111-1111-111111111101}"
               p:before="*"
-              s:ds="local:/Data/News Grid"
               s:id="{01234567-2345-6789-abcd-ef0123456789}"
               s:par="CSSStyles&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />

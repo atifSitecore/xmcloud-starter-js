@@ -32,7 +32,6 @@ Languages:
             <r
               uid="{B1111111-1111-1111-1111-111111111101}"
               p:before="*"
-              s:ds="local:/Data/Property Grid"
               s:id="{78901234-f012-3456-789a-bcdef0123456}"
               s:par="CSSStyles&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />

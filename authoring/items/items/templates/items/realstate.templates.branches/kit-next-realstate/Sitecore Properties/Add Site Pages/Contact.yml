@@ -32,7 +32,6 @@ Languages:
             <r
               uid="{B5111111-1111-1111-1111-111111111101}"
               p:before="*"
-              s:ds="local:/Data/Contact Form"
               s:id="{12345678-3456-789a-bcde-f01234567890}"
               s:par="CSSStyles&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />
