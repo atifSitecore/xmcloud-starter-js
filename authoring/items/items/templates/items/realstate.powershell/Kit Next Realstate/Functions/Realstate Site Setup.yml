@@ -17,17 +17,17 @@ SharedFields:
         param(
             [Parameter(Mandatory = $true, Position = 0 )]
             [Item]$Site,
-        
+    
             [Parameter(Mandatory = $true, Position = 1 )]
-            [Item[]]$TenantTemplates	
+            [Item[]]$TenantTemplates    
         )
-        
+    
         begin {
             Write-Log "Kit Next Realstate - Post Site Creation Script" -Log "INFO"
             Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Begin"
             Import-Function Get-ProjectTemplateBasedOnBaseTemplate
         }
-        
+    
         process {
             Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Process"
             $sitePath = $Site.Paths.Path
@@ -40,7 +40,7 @@ SharedFields:
             $siteName = $Site.Name
             $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($sitename)" -Language $Site.Language
             $siteGrouping.StartItem = $item.ID
-            
+    
             Write-Verbose "Create page templates in the Site Collection"
             $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
             $baseHomePageTemplateId = "{4ACCF644-A506-421F-B60F-A05E5C6196B4}"
@@ -57,23 +57,23 @@ SharedFields:
             $homePageTemplate = Update-PageTemplate -BaseTemplateId $baseHomePageTemplateId -TemplateName "Home Page" -TemplatesRootPath $templatesRootPath
             $propertyDetailTemplate = Update-PageTemplate -BaseTemplateId $basePropertyDetailPageTemplateId -TemplateName "Property Detail Page" -TemplatesRootPath $templatesRootPath
             $pageFolderTemplate = Update-PageTemplate -BaseTemplateId $basePageFolderTemplateId -TemplateName "Page Folder" -TemplatesRootPath $templatesRootPath
-
+    
             Write-Verbose "Update insert options"
             $insertOptions = @( $pageTemplate.ID, $propertyDetailTemplate.ID, $pageFolderTemplate.ID )
             Update-TemplateInsertOptions -TemplateItem $homePageTemplate -InsertOptions $insertOptions
             Update-TemplateInsertOptions -TemplateItem $pageTemplate -InsertOptions $insertOptions
             Update-TemplateInsertOptions -TemplateItem $propertyDetailTemplate -InsertOptions $insertOptions
             Update-TemplateInsertOptions -TemplateItem $pageFolderTemplate -InsertOptions $insertOptions
-
+    
             # Add Page Design and link partial designs
             Write-Verbose "Add Page Design and link partial designs"
             $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -Language $Site.Language -ErrorAction SilentlyContinue
             $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -Language $Site.Language -ErrorAction SilentlyContinue
-
+    
             if ($headerPartial -and $footerPartial) {
                 $defaultPageDesign = New-Item -Path "$($sitePath)/Presentation/Page Designs" -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
                 $defaultPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
-
+    
                 $pageDesigns = Get-Item -path "$sitePath/Presentation/Page Designs" -Language $Site.Language
                 $map = [Sitecore.Text.UrlString]::new()
                 $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
@@ -82,31 +82,31 @@ SharedFields:
                 $map[$pageFolderTemplate.ID] = "$($defaultPageDesign.ID)"
                 $pageDesigns.TemplatesMapping = [System.Web.HttpUtility]::UrlEncode($map.toString())
             }
-            
+    
             Write-Verbose "Update the home page template"
             Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
-            
+    
             # Set templates for child pages
             Set-ItemTemplate -Path "$sitePath/Home/Properties" -Template $pageFolderTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/About" -Template $pageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Contact" -Template $pageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Communities" -Template $pageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/News" -Template $pageTemplate.ID
-            
+    
             # Set property detail pages
             Get-ChildItem -Path "$sitePath/Home/Properties" | ForEach-Object {
                 if ($_.TemplateName -ne "Data Folder") {
                     Set-ItemTemplate -Item $_ -Template $propertyDetailTemplate.ID
                 }
             }
-
+    
             Write-Verbose "Update the home page renderings"
             $renderingContainerFullBleed = Get-Item -Path '/sitecore/layout/Renderings/Feature/JSS Experience Accelerator/Page Structure/Container Full Bleed' -ErrorAction SilentlyContinue
             $renderingPropertyHero = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyHero' -ErrorAction SilentlyContinue
             $renderingPropertyGrid = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyGrid' -ErrorAction SilentlyContinue
             $renderingCommunityShowcase = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Community/CommunityShowcase' -ErrorAction SilentlyContinue
-        
+    
             # prepare rendering definitions
             if ($renderingContainerFullBleed) {
                 $renderingContainerFullBleedDefinition = $renderingContainerFullBleed | New-Rendering
@@ -120,13 +120,13 @@ SharedFields:
             if ($renderingCommunityShowcase) {
                 $renderingCommunityShowcaseDefinition = $renderingCommunityShowcase | New-Rendering
             }
-                
+    
             # prepare rendering variants using service like Solterra
             if ($renderingPropertyHero -and $service) {
                 $propertyHeroVariants = $service.GetAvailableRenderingVariants($Site, $renderingPropertyHero.Name, $renderingPropertyHero.ID, $item.TemplateID)
                 $propertyHeroVariant = $propertyHeroVariants | Where-Object { $_.DisplayName -eq "Default" }
             }
-            
+    
             # Add renderings to Home page using local:/Data/... pattern
             if ($renderingContainerFullBleedDefinition) {
                 Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "excludeTopMargin" = "1" } -FinalLayout
@@ -142,25 +142,25 @@ SharedFields:
             if ($renderingCommunityShowcaseDefinition) {
                 Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingCommunityShowcaseDefinition -Parameter @{ "DynamicPlaceholderId" = "4" } -DataSource "local:/Data/Community Highlights" -FinalLayout
             }
-
+    
             Write-Verbose "Update home page fields"
             $title = "Sitecore Properties"
             $shortTitle = "Sitecore Properties"
-
+    
             $item."pageTitle" = $title
             $item."pageShortTitle" = $shortTitle
             $item."pageHeaderTitle" = $shortTitle
             $item."pageSummary" = "Discover your dream property with Sitecore Properties"
-
+    
             $item."metadataTitle" = $title
             $item."metadataDescription" = "Premium real estate listings and property management"
             $item."metadataKeywords" = "real estate, properties, homes, luxury"
             $item."ogTitle" = $title
             $item."ogDescription" = "Discover your dream property with Sitecore Properties"
-
+    
             Write-Log "Real Estate site setup completed successfully" -Log "INFO"
         }
-        
+    
         end {
             Write-Verbose "Cmdlet Invoke-ModuleScriptBody - End"
         }
