@@ -1,0 +1,13 @@
+---
+ID: "da7a1008-0001-0001-0001-000000000001"
+Parent: "06901234-def0-1234-5678-678901234567"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Site Pages/Properties/Modern Loft/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z

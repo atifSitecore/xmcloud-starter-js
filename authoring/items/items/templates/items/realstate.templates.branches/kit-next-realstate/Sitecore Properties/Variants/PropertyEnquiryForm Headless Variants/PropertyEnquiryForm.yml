@@ -1,0 +1,13 @@
+---
+ID: "var00004-0001-0001-0001-000000000002"
+Parent: "var00004-0001-0001-0001-000000000001"
+Template: "39190c3e-04f8-415d-b3b8-cf11d5e57b7e"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Variants/PropertyEnquiryForm Headless Variants/PropertyEnquiryForm"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z

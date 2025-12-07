@@ -7,149 +7,162 @@ SharedFields:
 - ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
   Hint: Script
   Value: |
-    function Invoke-Step {
+    Import-Function Get-ItemByIdSafe
+    Import-Function Update-PageTemplate
+    Import-Function Update-LinkField
+    Import-Function Update-TemplateInsertOptions
+    
+    function Invoke-ModuleScriptBody {
         [CmdletBinding()]
         param(
-            [Parameter(Mandatory = $true, Position = 0)]
-            [Sitecore.XA.JSS.Foundation.Scaffolding.Models.CreateNewJSSSiteModel]$Model
+            [Parameter(Mandatory = $true, Position = 0 )]
+            [Item]$Site,
+        
+            [Parameter(Mandatory = $true, Position = 1 )]
+            [Item[]]$TenantTemplates	
         )
-    
+        
         begin {
-            Write-Log "Kit Next Realstate - Post Site Setup Script" -Log "INFO"
+            Write-Log "Kit Next Realstate - Post Site Creation Script" -Log "INFO"
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Begin"
+            Import-Function Get-ProjectTemplateBasedOnBaseTemplate
         }
         
         process {
-            [Item]$SiteLocation = $Model.SiteLocation
-            $sitePath = "$($SiteLocation.Paths.Path)/$($Model.SiteName)"
-            $Site = Get-Item -Path $sitePath
-            
-            Write-Log "Setting up site at: $sitePath" -Log "INFO"
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Process"
+            $sitePath = $Site.Paths.Path
+            $siteCollection = $Site.Parent
+            $service = [Sitecore.DependencyInjection.ServiceLocator]::ServiceProvider.GetService([Sitecore.XA.Foundation.Variants.Abstractions.Services.IAvailableRenderingVariantService])
+            $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
+            Write-Verbose "My site: $sitePath"
     
-            # Configure the rendering host and start item
-            Write-Log "Configuring rendering host" -Log "INFO"
-            $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($Model.SiteName)" -ErrorAction SilentlyContinue
-            $homeItem = Get-Item -Path "$sitePath/Home" -ErrorAction SilentlyContinue
+            Write-Verbose "Reset the start item and the rendering host"
+            $siteName = $Site.Name
+            $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($sitename)" -Language $Site.Language
+            $siteGrouping.StartItem = $item.ID
             
-            if ($siteGrouping -and $homeItem) {
-                $siteGrouping.Editing.BeginEdit()
-                $siteGrouping["RenderingHost"] = "kit-next-realstate"
-                $siteGrouping["StartItem"] = $homeItem.ID
-                $siteGrouping.Editing.EndEdit()
-                Write-Log "Configured rendering host and start item" -Log "INFO"
-            }
-            
-            # Get base page template ID
+            Write-Verbose "Create page templates in the Site Collection"
             $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
-            
-            # Create Page Design and link partial designs
-            Write-Log "Creating Page Design" -Log "INFO"
-            $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -ErrorAction SilentlyContinue
-            $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -ErrorAction SilentlyContinue
-            
+            $baseHomePageTemplateId = "{4ACCF644-A506-421F-B60F-A05E5C6196B4}"
+            $basePropertyDetailPageTemplateId = "{B0602368-F67C-433C-8700-862D480546D0}"
+            $basePageFolderTemplateId = "{84DBE64B-0FED-4125-A971-725C0155C321}"
+    
+            $templatesRootPath = "master:/sitecore/templates/Project/$($siteCollection.Name)"
+    
+            $pageTemplate = Get-Item -Path "$templatesRootPath/Page" -ErrorAction SilentlyContinue
+            if ($pageTemplate) {
+                $pageTemplate."__Base template" = $basePageTemplateId
+            }
+    
+            $homePageTemplate = Update-PageTemplate -BaseTemplateId $baseHomePageTemplateId -TemplateName "Home Page" -TemplatesRootPath $templatesRootPath
+            $propertyDetailTemplate = Update-PageTemplate -BaseTemplateId $basePropertyDetailPageTemplateId -TemplateName "Property Detail Page" -TemplatesRootPath $templatesRootPath
+            $pageFolderTemplate = Update-PageTemplate -BaseTemplateId $basePageFolderTemplateId -TemplateName "Page Folder" -TemplatesRootPath $templatesRootPath
+
+            Write-Verbose "Update insert options"
+            $insertOptions = @( $pageTemplate.ID, $propertyDetailTemplate.ID, $pageFolderTemplate.ID )
+            Update-TemplateInsertOptions -TemplateItem $homePageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $pageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $propertyDetailTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $pageFolderTemplate -InsertOptions $insertOptions
+
+            # Add Page Design and link partial designs
+            Write-Verbose "Add Page Design and link partial designs"
+            $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -Language $Site.Language -ErrorAction SilentlyContinue
+            $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -Language $Site.Language -ErrorAction SilentlyContinue
+
             if ($headerPartial -and $footerPartial) {
-                $pageDesignsPath = "$sitePath/Presentation/Page Designs"
-                $defaultPageDesign = Get-Item -Path "$pageDesignsPath/Default" -ErrorAction SilentlyContinue
-                
-                if (-not $defaultPageDesign) {
-                    $defaultPageDesign = New-Item -Path $pageDesignsPath -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
+                $defaultPageDesign = New-Item -Path "$($sitePath)/Presentation/Page Designs" -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
+                $defaultPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
+
+                $pageDesigns = Get-Item -path "$sitePath/Presentation/Page Designs" -Language $Site.Language
+                $map = [Sitecore.Text.UrlString]::new()
+                $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
+                $map[$pageTemplate.ID] = "$($defaultPageDesign.ID)"
+                $map[$propertyDetailTemplate.ID] = "$($defaultPageDesign.ID)"
+                $map[$pageFolderTemplate.ID] = "$($defaultPageDesign.ID)"
+                $pageDesigns.TemplatesMapping = [System.Web.HttpUtility]::UrlEncode($map.toString())
+            }
+            
+            Write-Verbose "Update the home page template"
+            Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
+            $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
+            
+            # Set templates for child pages
+            Set-ItemTemplate -Path "$sitePath/Home/Properties" -Template $pageFolderTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/About" -Template $pageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Contact" -Template $pageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Communities" -Template $pageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/News" -Template $pageTemplate.ID
+            
+            # Set property detail pages
+            Get-ChildItem -Path "$sitePath/Home/Properties" | ForEach-Object {
+                if ($_.TemplateName -ne "Data Folder") {
+                    Set-ItemTemplate -Item $_ -Template $propertyDetailTemplate.ID
                 }
+            }
+
+            Write-Verbose "Update the home page renderings"
+            $renderingContainerFullBleed = Get-Item -Path '/sitecore/layout/Renderings/Feature/JSS Experience Accelerator/Page Structure/Container Full Bleed' -ErrorAction SilentlyContinue
+            $renderingPropertyHero = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyHero' -ErrorAction SilentlyContinue
+            $renderingPropertyGrid = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyGrid' -ErrorAction SilentlyContinue
+            $renderingCommunityShowcase = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Community/CommunityShowcase' -ErrorAction SilentlyContinue
+        
+            # prepare rendering definitions
+            if ($renderingContainerFullBleed) {
+                $renderingContainerFullBleedDefinition = $renderingContainerFullBleed | New-Rendering
+            }
+            if ($renderingPropertyHero) {
+                $renderingPropertyHeroDefinition = $renderingPropertyHero | New-Rendering
+            }
+            if ($renderingPropertyGrid) {
+                $renderingPropertyGridDefinition = $renderingPropertyGrid | New-Rendering
+            }
+            if ($renderingCommunityShowcase) {
+                $renderingCommunityShowcaseDefinition = $renderingCommunityShowcase | New-Rendering
+            }
                 
-                $defaultPageDesign.Editing.BeginEdit()
-                $defaultPageDesign["PartialDesigns"] = "$($headerPartial.ID)|$($footerPartial.ID)"
-                $defaultPageDesign.Editing.EndEdit()
-                Write-Log "Created Default Page Design with Header and Footer" -Log "INFO"
-                
-                # Set up templates mapping so pages automatically get the page design
-                $pageDesigns = Get-Item -Path $pageDesignsPath -ErrorAction SilentlyContinue
-                if ($pageDesigns) {
-                    $map = [Sitecore.Text.UrlString]::new()
-                    $map[$basePageTemplateId] = "$($defaultPageDesign.ID)"
-                    
-                    $pageDesigns.Editing.BeginEdit()
-                    $pageDesigns["TemplatesMapping"] = [System.Web.HttpUtility]::UrlEncode($map.toString())
-                    $pageDesigns.Editing.EndEdit()
-                    Write-Log "Set templates mapping for Page template" -Log "INFO"
-                }
+            # prepare rendering variants using service like Solterra
+            if ($renderingPropertyHero -and $service) {
+                $propertyHeroVariants = $service.GetAvailableRenderingVariants($Site, $renderingPropertyHero.Name, $renderingPropertyHero.ID, $item.TemplateID)
+                $propertyHeroVariant = $propertyHeroVariants | Where-Object { $_.DisplayName -eq "Default" }
             }
             
-            # Add renderings to Home page
-            Write-Log "Adding renderings to Home page" -Log "INFO"
-            
-            if ($homeItem) {
-                # Get rendering definitions
-                $renderingPropertyHero = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyHero' -ErrorAction SilentlyContinue
-                $renderingPropertyGrid = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Property/PropertyGrid' -ErrorAction SilentlyContinue
-                $renderingCommunityShowcase = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Community/CommunityShowcase' -ErrorAction SilentlyContinue
-                $renderingNewsCard = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/News/NewsCard' -ErrorAction SilentlyContinue
-                
-                # Create rendering instances
-                if ($renderingPropertyHero) {
-                    $heroDefinition = $renderingPropertyHero | New-Rendering
-                    Add-Rendering -Item $homeItem -PlaceHolder "headless-main" -Instance $heroDefinition -DataSource "$sitePath/Data/Home Page Hero" -FinalLayout
-                    Write-Log "Added PropertyHero rendering to Home page" -Log "INFO"
-                }
-                
-                if ($renderingPropertyGrid) {
-                    $gridDefinition = $renderingPropertyGrid | New-Rendering
-                    Add-Rendering -Item $homeItem -PlaceHolder "headless-main" -Instance $gridDefinition -DataSource "$sitePath/Data/Featured Properties Grid" -FinalLayout
-                    Write-Log "Added PropertyGrid rendering to Home page" -Log "INFO"
-                }
-                
-                if ($renderingCommunityShowcase) {
-                    $communityDefinition = $renderingCommunityShowcase | New-Rendering
-                    Add-Rendering -Item $homeItem -PlaceHolder "headless-main" -Instance $communityDefinition -DataSource "$sitePath/Data/Community Showcase" -FinalLayout
-                    Write-Log "Added CommunityShowcase rendering to Home page" -Log "INFO"
-                }
-                
-                Write-Log "Completed adding renderings to Home page" -Log "INFO"
+            # Add renderings to Home page using local:/Data/... pattern
+            if ($renderingContainerFullBleedDefinition) {
+                Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "excludeTopMargin" = "1" } -FinalLayout
             }
-            
-            # Add renderings to Properties page
-            Write-Log "Adding renderings to Properties page" -Log "INFO"
-            $propertiesPage = Get-Item -Path "$sitePath/Home/Properties" -ErrorAction SilentlyContinue
-            
-            if ($propertiesPage -and $renderingPropertyGrid) {
-                $gridDefinition = $renderingPropertyGrid | New-Rendering
-                Add-Rendering -Item $propertiesPage -PlaceHolder "headless-main" -Instance $gridDefinition -DataSource "$sitePath/Data/Properties" -FinalLayout
-                Write-Log "Added PropertyGrid rendering to Properties page" -Log "INFO"
+            if ($renderingPropertyHeroDefinition -and $propertyHeroVariant) {
+                Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingPropertyHeroDefinition -Parameter @{ "FieldNames" = $propertyHeroVariant.ID; "DynamicPlaceholderId" = "2" } -DataSource "local:/Data/Home Hero" -FinalLayout
+            } elseif ($renderingPropertyHeroDefinition) {
+                Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingPropertyHeroDefinition -Parameter @{ "DynamicPlaceholderId" = "2" } -DataSource "local:/Data/Home Hero" -FinalLayout
             }
-            
-            # Add renderings to Communities page
-            Write-Log "Adding renderings to Communities page" -Log "INFO"
-            $communitiesPage = Get-Item -Path "$sitePath/Home/Communities" -ErrorAction SilentlyContinue
-            
-            if ($communitiesPage -and $renderingCommunityShowcase) {
-                $communityDefinition = $renderingCommunityShowcase | New-Rendering
-                Add-Rendering -Item $communitiesPage -PlaceHolder "headless-main" -Instance $communityDefinition -DataSource "$sitePath/Data/Communities" -FinalLayout
-                Write-Log "Added CommunityShowcase rendering to Communities page" -Log "INFO"
+            if ($renderingPropertyGridDefinition) {
+                Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingPropertyGridDefinition -Parameter @{ "DynamicPlaceholderId" = "3" } -DataSource "local:/Data/Featured Properties" -FinalLayout
             }
-            
-            # Add renderings to News page
-            Write-Log "Adding renderings to News page" -Log "INFO"
-            $newsPage = Get-Item -Path "$sitePath/Home/News" -ErrorAction SilentlyContinue
-            
-            if ($newsPage -and $renderingNewsCard) {
-                $newsDefinition = $renderingNewsCard | New-Rendering
-                Add-Rendering -Item $newsPage -PlaceHolder "headless-main" -Instance $newsDefinition -DataSource "$sitePath/Data/News" -FinalLayout
-                Write-Log "Added NewsCard rendering to News page" -Log "INFO"
+            if ($renderingCommunityShowcaseDefinition) {
+                Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingCommunityShowcaseDefinition -Parameter @{ "DynamicPlaceholderId" = "4" } -DataSource "local:/Data/Community Highlights" -FinalLayout
             }
-            
-            # Add form to Contact page
-            Write-Log "Adding renderings to Contact page" -Log "INFO"
-            $contactPage = Get-Item -Path "$sitePath/Home/Contact" -ErrorAction SilentlyContinue
-            $renderingEnquiryForm = Get-Item -Path '/sitecore/layout/Renderings/Project/kit-next-realstate/Forms/PropertyEnquiryForm' -ErrorAction SilentlyContinue
-            
-            if ($contactPage -and $renderingEnquiryForm) {
-                $formDefinition = $renderingEnquiryForm | New-Rendering
-                Add-Rendering -Item $contactPage -PlaceHolder "headless-main" -Instance $formDefinition -DataSource "$sitePath/Data/Contact Form" -FinalLayout
-                Write-Log "Added PropertyEnquiryForm rendering to Contact page" -Log "INFO"
-            }
-            
-            Write-Log "Real Estate site setup completed" -Log "INFO"
+
+            Write-Verbose "Update home page fields"
+            $title = "Sitecore Properties"
+            $shortTitle = "Sitecore Properties"
+
+            $item."pageTitle" = $title
+            $item."pageShortTitle" = $shortTitle
+            $item."pageHeaderTitle" = $shortTitle
+            $item."pageSummary" = "Discover your dream property with Sitecore Properties"
+
+            $item."metadataTitle" = $title
+            $item."metadataDescription" = "Premium real estate listings and property management"
+            $item."metadataKeywords" = "real estate, properties, homes, luxury"
+            $item."ogTitle" = $title
+            $item."ogDescription" = "Discover your dream property with Sitecore Properties"
+
+            Write-Log "Real Estate site setup completed successfully" -Log "INFO"
         }
         
         end {
-            Write-Log "Kit Next Realstate - Post Site Setup Complete" -Log "INFO"
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - End"
         }
     }
 Languages:

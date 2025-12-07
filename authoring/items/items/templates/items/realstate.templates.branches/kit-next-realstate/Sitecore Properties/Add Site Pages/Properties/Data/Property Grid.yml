@@ -1,0 +1,19 @@
+---
+ID: "da7a0003-0001-0001-0001-000000000002"
+Parent: "da7a0003-0001-0001-0001-000000000001"
+Template: "b2c3d4e5-f6a7-8901-bcde-f23456789012"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Site Pages/Properties/Data/Property Grid"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z
+    - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+      Hint: Title
+      Value: "Browse Our Properties"
+    - ID: "7a5e5d36-0a3b-4c5e-9f8a-1b2c3d4e5f6a"
+      Hint: Subtitle
+      Value: "Find your perfect home from our curated collection"

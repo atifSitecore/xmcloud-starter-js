@@ -1,0 +1,13 @@
+---
+ID: "da7a1009-0001-0001-0001-000000000001"
+Parent: "17012345-ef01-2345-6789-789012345678"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Site Pages/Properties/Mountain Retreat/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z

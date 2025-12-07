@@ -18,7 +18,7 @@ SharedFields:
   Value: "b0123456-7890-abcd-ef01-234567890abd"
 - ID: "e62c28f0-9d3b-46e2-8bec-a5e120542499"
   Hint: Template
-  Value: "{AE123456-7890-ABCD-EF01-234567890ABC}"
+  Value: "{C4D5E6F7-0123-4567-89AB-CDEF01234567}"
 Languages:
 - Language: en
   Versions:

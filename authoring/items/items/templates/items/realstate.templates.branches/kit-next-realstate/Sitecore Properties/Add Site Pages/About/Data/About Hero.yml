@@ -1,0 +1,23 @@
+---
+ID: "da7a0001-0001-0001-0001-000000000002"
+Parent: "da7a0001-0001-0001-0001-000000000001"
+Template: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Site Pages/About/Data/About Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z
+    - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+      Hint: Title
+      Value: "About Sitecore Properties"
+    - ID: "7a5e5d36-0a3b-4c5e-9f8a-1b2c3d4e5f6a"
+      Hint: Subtitle
+      Value: "Your trusted partner in finding the perfect home"
+    - ID: "8b6f7c8d-1a2b-3c4d-5e6f-7a8b9c0d1e2f"
+      Hint: Description
+      Value: |
+        <p>With over 25 years of experience in the real estate industry, Sitecore Properties has helped thousands of families find their dream homes. Our team of dedicated professionals is committed to providing exceptional service and expert guidance throughout your property journey.</p>

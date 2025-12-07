@@ -1,0 +1,23 @@
+---
+ID: "da7a0002-0001-0001-0001-000000000002"
+Parent: "da7a0002-0001-0001-0001-000000000001"
+Template: "e4f5a6b7-c8d9-0e1f-2a3b-4c5d6e7f8a9b"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Site Pages/Contact/Data/Contact Form"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z
+    - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+      Hint: Title
+      Value: "Get in Touch"
+    - ID: "7a5e5d36-0a3b-4c5e-9f8a-1b2c3d4e5f6a"
+      Hint: Subtitle
+      Value: "We'd love to hear from you"
+    - ID: "8b6f7c8d-1a2b-3c4d-5e6f-7a8b9c0d1e2f"
+      Hint: Description
+      Value: |
+        <p>Have questions about a property or need assistance? Fill out the form below and one of our expert agents will get back to you within 24 hours.</p>

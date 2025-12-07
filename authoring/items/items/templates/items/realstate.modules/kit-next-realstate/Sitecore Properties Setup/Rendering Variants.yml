@@ -1,0 +1,13 @@
+---
+ID: "rvf00000-0001-0001-0001-000000000001"
+Parent: "a2c5d6e7-f8a9-0123-4ef0-567890123456"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: "/sitecore/system/Settings/Project/kit-next-realstate/Sitecore Properties Setup/Rendering Variants"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z

@@ -1,0 +1,23 @@
+---
+ID: "rvf00001-0001-0001-0001-000000000001"
+Parent: "rvf00000-0001-0001-0001-000000000001"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: "/sitecore/system/Settings/Project/kit-next-realstate/Sitecore Properties Setup/Rendering Variants/PropertyHero Variants"
+SharedFields:
+- ID: "52c91c75-6698-4701-a8a2-242ace59a8d6"
+  Hint: Location
+  Value: "{F1234567-0001-0001-0001-000000000001}"
+- ID: "7868e6bc-525c-4fce-ab8a-77da3e09b171"
+  Hint: Name
+  Value: PropertyHero
+- ID: "e62c28f0-9d3b-46e2-8bec-a5e120542499"
+  Hint: Template
+  Value: "{39190C3E-04F8-415D-B3B8-CF11D5E57B7E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z

@@ -1,0 +1,30 @@
+---
+ID: "d5e6f708-1234-5678-9abc-def012345678"
+Parent: "c4d5e6f7-0123-4567-89ab-cdef01234567"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: "/sitecore/templates/Branches/Project/kit-next-realstate/Sitecore Properties/Add Available Renderings/$name"
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {56789012-DEF0-1234-5678-9ABCDEF01234}
+    {78901234-F012-3456-789A-BCDEF0123456}
+    {67890123-EF01-2345-6789-ABCDEF012345}
+    {01234567-2345-6789-ABCD-EF0123456789}
+    {12345678-3456-789A-BCDE-F01234567890}
+    {B2A2B2C2-D2E2-F202-0202-020202020202}
+    {B3A3B3C3-D3E3-F303-0303-030303030303}
+    {90123456-1234-5678-9ABC-DEF012345678}
+    {89012345-0123-4567-89AB-CDEF01234567}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251207T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
