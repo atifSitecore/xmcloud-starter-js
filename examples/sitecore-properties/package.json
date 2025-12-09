@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sitecore-content-sdk/nextjs": "^1.2.1",
+    "@sitecore-jss/sitecore-jss-nextjs": "^22.10.0",
     "clsx": "latest",
     "next": "latest",
     "react": "latest",
