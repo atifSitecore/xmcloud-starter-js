@@ -10,9 +10,8 @@
   },
   "dependencies": {
     "@sitecore-content-sdk/nextjs": "^1.2.1",
-    "@sitecore-jss/sitecore-jss-nextjs": "^22.10.0",
     "clsx": "latest",
-    "next": "latest",
+    "next": "^14.2.33",
     "react": "latest",
     "react-dom": "latest"
   },
