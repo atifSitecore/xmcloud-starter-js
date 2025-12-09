@@ -1,0 +1,3 @@
+# Sitecore Properties module registration for CCL
+namespace: SitecoreProperties
+moduleJson: ccl.templates.branches/Sitecore Properties/sitecore-properties.module.json
