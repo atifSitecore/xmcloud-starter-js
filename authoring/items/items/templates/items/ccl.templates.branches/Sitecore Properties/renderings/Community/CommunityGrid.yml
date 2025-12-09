@@ -1,6 +1,6 @@
 # CommunityGrid rendering definition
 ---
-ID: "communitygrid-rendering"
+ID: "c3eebc99-9c0b-4ef8-bb6d-6bb9bd380a53"
 Name: "CommunityGrid"
 Component: "CommunityGrid"
 DataSource: "/sitecore/content/Sitecore Properties/Home/Communities"

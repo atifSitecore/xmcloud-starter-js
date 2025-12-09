@@ -1,0 +1,10 @@
+---
+ID: "b8eebc99-9c0b-4ef8-bb6d-6bb9bd380a62"
+Name: "Property Page Design"
+Description: "Design for property detail pages. Includes header, property detail, gallery, amenities, and footer."
+Partials:
+  - "GlobalHeader"
+  - "PropertyDetail"
+  - "GalleryGrid"
+  - "AmenitiesGrid"
+  - "GlobalFooter"

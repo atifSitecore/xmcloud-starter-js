@@ -1,0 +1,11 @@
+---
+ID: "b7eebc99-9c0b-4ef8-bb6d-6bb9bd380a61"
+Name: "Home Page Design"
+Description: "Design for the main landing page. Includes header, hero, property grid, promo, testimonials, and footer."
+Partials:
+  - "GlobalHeader"
+  - "HomePageHero"
+  - "PropertyGrid"
+  - "HomePagePromo"
+  - "TestimonialCarousel"
+  - "GlobalFooter"

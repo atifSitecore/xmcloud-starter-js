@@ -1,0 +1,11 @@
+---
+ID: "b9eebc99-9c0b-4ef8-bb6d-6bb9bd380a63"
+Name: "Community Page Design"
+Description: "Design for community detail pages. Includes header, community detail, location map, amenities, gallery, and footer."
+Partials:
+  - "GlobalHeader"
+  - "CommunityDetail"
+  - "LocationMap"
+  - "AmenitiesGrid"
+  - "GalleryGrid"
+  - "GlobalFooter"

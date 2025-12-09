@@ -2,7 +2,7 @@
 # /sitecore/content/Sitecore Properties/Home/Properties
 # Editors: Add new property items as children under Properties Page for automatic grid display.
 ---
-ID: "sitecore-properties-property-001"
+ID: "e1eebc99-9c0b-4ef8-bb6d-6bb9bd380a31"
 Template: "PropertyCard"
 Path: "/sitecore/content/Sitecore Properties/Properties/Costa Mare"
 Fields:
@@ -23,7 +23,7 @@ Fields:
     - "media-library/costa-mare-gallery-2.jpg"
   EnquiryCTA: "Register your interest"
 ---
-ID: "sitecore-properties-property-002"
+ID: "e2eebc99-9c0b-4ef8-bb6d-6bb9bd380a32"
 Template: "PropertyCard"
 Path: "/sitecore/content/Sitecore Properties/Properties/Eltiera Heights"
 Fields:

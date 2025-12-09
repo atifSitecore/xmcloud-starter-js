@@ -1,6 +1,6 @@
 # CommunityPage Template
 ---
-ID: "community-page-template"
+ID: "c0eebc99-9c0b-4ef8-bb6d-6bb9bd380a21"
 Name: "Community Page"
 BaseTemplate: "Standard Template"
 Fields:
@@ -25,7 +25,7 @@ Placeholders:
 
 # Sample Community Items
 ---
-ID: "community-001"
+ID: "d1eebc99-9c0b-4ef8-bb6d-6bb9bd380a22"
 Name: "Palm Jumeirah"
 Description: "Luxury waterfront living in Dubai."
 Image: "/images/palm-jumeirah.jpg"
@@ -40,7 +40,7 @@ Gallery:
   - "/images/palm-jumeirah-gallery-1.jpg"
   - "/images/palm-jumeirah-gallery-2.jpg"
 ---
-ID: "community-002"
+ID: "d2eebc99-9c0b-4ef8-bb6d-6bb9bd380a23"
 Name: "Dubai Marina"
 Description: "Vibrant urban waterfront community."
 Image: "/images/dubai-marina.jpg"
@@ -55,7 +55,7 @@ Gallery:
   - "/images/dubai-marina-gallery-1.jpg"
   - "/images/dubai-marina-gallery-2.jpg"
 ---
-ID: "community-003"
+ID: "d3eebc99-9c0b-4ef8-bb6d-6bb9bd380a24"
 Name: "Jumeirah Islands"
 Description: "Exclusive island living with lush landscapes."
 Image: "/images/jumeirah-islands.jpg"
@@ -70,7 +70,7 @@ Gallery:
   - "/images/jumeirah-islands-gallery-1.jpg"
   - "/images/jumeirah-islands-gallery-2.jpg"
 ---
-ID: "community-004"
+ID: "d4eebc99-9c0b-4ef8-bb6d-6bb9bd380a25"
 Name: "Arabian Ranches"
 Description: "Family-friendly gated community with golf course."
 Image: "/images/arabian-ranches.jpg"
@@ -85,7 +85,7 @@ Gallery:
   - "/images/arabian-ranches-gallery-1.jpg"
   - "/images/arabian-ranches-gallery-2.jpg"
 ---
-ID: "community-005"
+ID: "d5eebc99-9c0b-4ef8-bb6d-6bb9bd380a26"
 Name: "Downtown Dubai"
 Description: "Iconic city center with world-class attractions."
 Image: "/images/downtown-dubai.jpg"

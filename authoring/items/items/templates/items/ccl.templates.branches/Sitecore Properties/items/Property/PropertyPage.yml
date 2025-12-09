@@ -1,6 +1,6 @@
 # PropertyPage Template
 ---
-ID: "property-page-template"
+ID: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11"
 Name: "Property Page"
 BaseTemplate: "Standard Template"
 Fields:
@@ -29,7 +29,7 @@ Placeholders:
 
 # Sample Property Items
 ---
-ID: "property-001"
+ID: "b1eebc99-9c0b-4ef8-bb6d-6bb9bd380a12"
 Title: "Azure Residences Penthouse"
 Description: "Stunning penthouse with panoramic sea views."
 Location: "Palm Jumeirah, Dubai"
@@ -47,7 +47,7 @@ Gallery:
   - "/images/azure-gallery-2.jpg"
 EnquiryCTA: "Book a Viewing"
 ---
-ID: "property-002"
+ID: "b2eebc99-9c0b-4ef8-bb6d-6bb9bd380a13"
 Title: "Marina Heights Apartment"
 Description: "Modern apartment in the heart of Dubai Marina."
 Location: "Dubai Marina, Dubai"
@@ -65,7 +65,7 @@ Gallery:
   - "/images/marina-gallery-2.jpg"
 EnquiryCTA: "Contact Agent"
 ---
-ID: "property-003"
+ID: "b3eebc99-9c0b-4ef8-bb6d-6bb9bd380a14"
 Title: "Jumeirah Islands Villa"
 Description: "Spacious villa with landscaped gardens."
 Location: "Jumeirah Islands, Dubai"
@@ -83,7 +83,7 @@ Gallery:
   - "/images/jumeirah-villa-gallery-2.jpg"
 EnquiryCTA: "Enquire for Similar"
 ---
-ID: "property-004"
+ID: "b4eebc99-9c0b-4ef8-bb6d-6bb9bd380a15"
 Title: "Arabian Ranches Townhouse"
 Description: "Family-friendly townhouse near parks and schools."
 Location: "Arabian Ranches, Dubai"
@@ -101,7 +101,7 @@ Gallery:
   - "/images/arabian-townhouse-gallery-2.jpg"
 EnquiryCTA: "Schedule a Visit"
 ---
-ID: "property-005"
+ID: "b5eebc99-9c0b-4ef8-bb6d-6bb9bd380a16"
 Title: "Downtown Dubai Loft"
 Description: "Stylish loft with Burj Khalifa views."
 Location: "Downtown Dubai, Dubai"

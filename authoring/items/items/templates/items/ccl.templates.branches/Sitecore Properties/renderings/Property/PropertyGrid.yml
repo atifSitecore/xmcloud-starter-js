@@ -1,6 +1,6 @@
 # PropertyGrid rendering definition
 ---
-ID: "propertygrid-rendering"
+ID: "c4eebc99-9c0b-4ef8-bb6d-6bb9bd380a54"
 Name: "PropertyGrid"
 Component: "PropertyGrid"
 DataSource: "/sitecore/content/Sitecore Properties/Home/Properties"

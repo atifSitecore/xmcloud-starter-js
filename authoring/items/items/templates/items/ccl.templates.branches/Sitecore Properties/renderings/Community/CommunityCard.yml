@@ -1,6 +1,6 @@
 # CommunityCard rendering definition
 ---
-ID: "communitycard-rendering"
+ID: "c1eebc99-9c0b-4ef8-bb6d-6bb9bd380a51"
 Name: "CommunityCard"
 Component: "CommunityCard"
 DataSource: "{community-item-path}"

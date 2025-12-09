@@ -1,0 +1,8 @@
+---
+ID: "baeedc99-9c0b-4ef8-bb6d-6bb9bd380a64"
+Name: "Communities List Page Design"
+Description: "Design for listing all communities. Includes header, community grid, and footer."
+Partials:
+  - "GlobalHeader"
+  - "CommunityGrid"
+  - "GlobalFooter"

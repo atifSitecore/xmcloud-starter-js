@@ -1,6 +1,6 @@
 # PropertyPage rendering definition
 ---
-ID: "propertypage-rendering"
+ID: "c6eebc99-9c0b-4ef8-bb6d-6bb9bd380a56"
 Name: "PropertyPage"
 Component: "PropertyPage"
 DataSource: "{property-item-path}"

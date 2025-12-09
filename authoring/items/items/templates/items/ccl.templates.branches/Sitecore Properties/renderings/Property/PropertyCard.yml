@@ -1,6 +1,6 @@
 # PropertyCard rendering definition
 ---
-ID: "propertycard-rendering"
+ID: "c2eebc99-9c0b-4ef8-bb6d-6bb9bd380a52"
 Name: "PropertyCard"
 Component: "PropertyCard"
 DataSource: "{property-item-path}"

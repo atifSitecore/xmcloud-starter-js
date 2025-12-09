@@ -1,6 +1,6 @@
 # CommunityDetail rendering definition
 ---
-ID: "communitydetail-rendering"
+ID: "c5eebc99-9c0b-4ef8-bb6d-6bb9bd380a55"
 Name: "CommunityDetail"
 Component: "CommunityDetail"
 DataSource: "{community-item-path}"
