@@ -1,0 +1,25 @@
+# CommunityCard rendering definition
+---
+ID: "communitycard-rendering"
+Name: "CommunityCard"
+Component: "CommunityCard"
+DataSource: "{community-item-path}"
+Description: "Displays a single community item. Supports featured and compact variants. Editable by authors."
+Parameters:
+  - "Variant" # Selects Featured or Compact
+GraphQL:
+  Query: |
+    query CommunityCard($id: String!) {
+      item(path: $id) {
+        ... on CommunityPage {
+          Name
+          Description
+          Image
+          Location
+        }
+      }
+    }
+  Variables:
+    id: "{community-item-path}"
+Placeholders:
+  - "community-card-content"

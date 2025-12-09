@@ -1,0 +1,26 @@
+{
+  "name": "Sitecore Properties",
+  "description": "Real estate site template for Sitecore XM Cloud, inspired by Ellington Properties.",
+  "templates": [
+    "items/Property/PropertyPage.yml",
+    "items/Community/CommunityPage.yml"
+  ],
+  "renderings": [
+    "renderings/Property/PropertyCard.yml",
+    "renderings/Property/PropertyGrid.yml",
+    "renderings/Property/PropertyPage.yml",
+    "renderings/Community/CommunityCard.yml",
+    "renderings/Community/CommunityGrid.yml",
+    "renderings/Community/CommunityDetail.yml"
+  ],
+  "branches": [
+    "ccl.templates.branches/Sitecore Properties"
+  ],
+  "powershell": [
+    "spe-scripts/site-2-setup.ps1",
+    "spe-scripts/site-3-setup.ps1"
+  ],
+  "media": [
+    "Add Sample Images"
+  ]
+}

@@ -1,0 +1,47 @@
+---
+ID: "sitecore-properties-template-propertycard"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: "/sitecore/templates/Project/sitecore-properties/Components/Property/PropertyCard"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/house.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Property Card
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "title-field-id"
+      Hint: Title
+      Value: ""
+    - ID: "desc-field-id"
+      Hint: Description
+      Value: ""
+    - ID: "location-field-id"
+      Hint: Location
+      Value: ""
+    - ID: "status-field-id"
+      Hint: Status
+      Value: ""
+    - ID: "features-field-id"
+      Hint: Features
+      Value: ""
+    - ID: "images-field-id"
+      Hint: Images
+      Value: ""
+    - ID: "community-field-id"
+      Hint: Community
+      Value: ""
+    - ID: "gallery-field-id"
+      Hint: Gallery
+      Value: ""
+    - ID: "cta-field-id"
+      Hint: EnquiryCTA
+      Value: ""

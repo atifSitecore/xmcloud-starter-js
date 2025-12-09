@@ -1,0 +1,17 @@
+# Home Page Gallery Sample Data
+Gallery:
+  - Title: "Palm Jumeirah View"
+    Image: "/images/gallery-palm-jumeirah.jpg"
+    Description: "Spectacular views from Palm Jumeirah properties."
+  - Title: "Dubai Marina Skyline"
+    Image: "/images/gallery-dubai-marina.jpg"
+    Description: "Modern architecture and vibrant city life."
+  - Title: "Jumeirah Islands Gardens"
+    Image: "/images/gallery-jumeirah-islands.jpg"
+    Description: "Lush landscapes and tranquil living."
+  - Title: "Arabian Ranches Golf"
+    Image: "/images/gallery-arabian-ranches.jpg"
+    Description: "Golf course and family-friendly amenities."
+  - Title: "Downtown Dubai Loft"
+    Image: "/images/gallery-downtown-loft.jpg"
+    Description: "Stylish lofts with iconic city views."

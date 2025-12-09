@@ -1,0 +1,27 @@
+# CommunityGrid rendering definition
+---
+ID: "communitygrid-rendering"
+Name: "CommunityGrid"
+Component: "CommunityGrid"
+DataSource: "/sitecore/content/Sitecore Properties/Home/Communities"
+Description: "Displays all child community items under Communities Page. Editable by authors."
+GraphQL:
+  Query: |
+    query CommunitiesPage($id: String!) {
+      item(path: $id) {
+        children {
+          results {
+            ... on CommunityPage {
+              Name
+              Description
+              Image
+              Location
+            }
+          }
+        }
+      }
+    }
+  Variables:
+    id: "/sitecore/content/Sitecore Properties/Home/Communities"
+Placeholders:
+  - "community-grid-items"

@@ -1,0 +1,45 @@
+# All property items below should be children of the Properties Page:
+# /sitecore/content/Sitecore Properties/Home/Properties
+# Editors: Add new property items as children under Properties Page for automatic grid display.
+---
+ID: "sitecore-properties-property-001"
+Template: "PropertyCard"
+Path: "/sitecore/content/Sitecore Properties/Properties/Costa Mare"
+Fields:
+  Title: "Costa Mare"
+  Description: "Introducing a new chapter of coastal living."
+  Location: "Ras Al Khaimah"
+  Status: "Available"
+  Features:
+    - "Beachfront access"
+    - "Modern design"
+    - "Luxury amenities"
+  Images:
+    - "media-library/costa-mare-1.jpg"
+    - "media-library/costa-mare-2.jpg"
+  Community: "Costa Mare Community"
+  Gallery:
+    - "media-library/costa-mare-gallery-1.jpg"
+    - "media-library/costa-mare-gallery-2.jpg"
+  EnquiryCTA: "Register your interest"
+---
+ID: "sitecore-properties-property-002"
+Template: "PropertyCard"
+Path: "/sitecore/content/Sitecore Properties/Properties/Eltiera Heights"
+Fields:
+  Title: "Eltiera Heights"
+  Description: "A higher perspective in everyday living."
+  Location: "Jumeirah Islands"
+  Status: "Available"
+  Features:
+    - "Panoramic views"
+    - "Elegant interiors"
+    - "Private pool"
+  Images:
+    - "media-library/eltiera-heights-1.jpg"
+    - "media-library/eltiera-heights-2.jpg"
+  Community: "Eltiera Heights Community"
+  Gallery:
+    - "media-library/eltiera-heights-gallery-1.jpg"
+    - "media-library/eltiera-heights-gallery-2.jpg"
+  EnquiryCTA: "Register your interest"

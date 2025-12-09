@@ -1,0 +1,32 @@
+# PropertyGrid rendering definition
+---
+ID: "propertygrid-rendering"
+Name: "PropertyGrid"
+Component: "PropertyGrid"
+DataSource: "/sitecore/content/Sitecore Properties/Home/Properties"
+Description: "Displays all child property items under Properties Page."
+GraphQL:
+  Query: |
+    query PropertiesPage($id: String!) {
+      item(path: $id) {
+        children {
+          results {
+            ... on PropertyCard {
+              Title
+              Description
+              Location
+              Status
+              Features
+              Images
+              Community
+              Gallery
+              EnquiryCTA
+            }
+          }
+        }
+      }
+    }
+  Variables:
+    id: "/sitecore/content/Sitecore Properties/Home/Properties"
+Placeholders:
+  - "property-grid-items"

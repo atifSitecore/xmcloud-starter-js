@@ -1,0 +1,101 @@
+# CommunityPage Template
+---
+ID: "community-page-template"
+Name: "Community Page"
+BaseTemplate: "Standard Template"
+Fields:
+  - Name: "Name"
+    Type: "Single-Line Text"
+  - Name: "Description"
+    Type: "Rich Text"
+  - Name: "Image"
+    Type: "Image"
+  - Name: "Location"
+    Type: "Single-Line Text"
+  - Name: "Latitude"
+    Type: "Number"
+  - Name: "Longitude"
+    Type: "Number"
+  - Name: "Amenities"
+    Type: "Multilist"
+  - Name: "Gallery"
+    Type: "Multilist"
+Placeholders:
+  - "community-page-content"
+
+# Sample Community Items
+---
+ID: "community-001"
+Name: "Palm Jumeirah"
+Description: "Luxury waterfront living in Dubai."
+Image: "/images/palm-jumeirah.jpg"
+Location: "Dubai, UAE"
+Latitude: 25.1122
+Longitude: 55.1396
+Amenities:
+  - "Private Beach"
+  - "Fitness Center"
+  - "Children's Play Area"
+Gallery:
+  - "/images/palm-jumeirah-gallery-1.jpg"
+  - "/images/palm-jumeirah-gallery-2.jpg"
+---
+ID: "community-002"
+Name: "Dubai Marina"
+Description: "Vibrant urban waterfront community."
+Image: "/images/dubai-marina.jpg"
+Location: "Dubai, UAE"
+Latitude: 25.0800
+Longitude: 55.1400
+Amenities:
+  - "Marina Walk"
+  - "Swimming Pools"
+  - "Retail Outlets"
+Gallery:
+  - "/images/dubai-marina-gallery-1.jpg"
+  - "/images/dubai-marina-gallery-2.jpg"
+---
+ID: "community-003"
+Name: "Jumeirah Islands"
+Description: "Exclusive island living with lush landscapes."
+Image: "/images/jumeirah-islands.jpg"
+Location: "Dubai, UAE"
+Latitude: 25.0650
+Longitude: 55.1700
+Amenities:
+  - "Clubhouse"
+  - "Jogging Tracks"
+  - "Community Pool"
+Gallery:
+  - "/images/jumeirah-islands-gallery-1.jpg"
+  - "/images/jumeirah-islands-gallery-2.jpg"
+---
+ID: "community-004"
+Name: "Arabian Ranches"
+Description: "Family-friendly gated community with golf course."
+Image: "/images/arabian-ranches.jpg"
+Location: "Dubai, UAE"
+Latitude: 25.0450
+Longitude: 55.2700
+Amenities:
+  - "Golf Course"
+  - "Community Parks"
+  - "Equestrian Club"
+Gallery:
+  - "/images/arabian-ranches-gallery-1.jpg"
+  - "/images/arabian-ranches-gallery-2.jpg"
+---
+ID: "community-005"
+Name: "Downtown Dubai"
+Description: "Iconic city center with world-class attractions."
+Image: "/images/downtown-dubai.jpg"
+Location: "Dubai, UAE"
+Latitude: 25.1972
+Longitude: 55.2744
+Amenities:
+  - "Burj Khalifa"
+  - "Dubai Mall"
+  - "Opera District"
+Gallery:
+  - "/images/downtown-dubai-gallery-1.jpg"
+  - "/images/downtown-dubai-gallery-2.jpg"

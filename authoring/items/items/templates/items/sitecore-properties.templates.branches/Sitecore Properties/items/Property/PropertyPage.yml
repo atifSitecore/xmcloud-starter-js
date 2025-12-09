@@ -1,0 +1,120 @@
+# PropertyPage Template
+---
+ID: "property-page-template"
+Name: "Property Page"
+BaseTemplate: "Standard Template"
+Fields:
+  - Name: "Title"
+    Type: "Single-Line Text"
+  - Name: "Description"
+    Type: "Rich Text"
+  - Name: "Location"
+    Type: "Single-Line Text"
+  - Name: "Status"
+    Type: "Droplist"
+    Source: "Available|Sold|Coming Soon"
+  - Name: "Features"
+    Type: "Multilist"
+  - Name: "Images"
+    Type: "Image"
+  - Name: "Community"
+    Type: "Droplink"
+    Source: "/sitecore/content/Sitecore Properties/Home/Communities"
+  - Name: "Gallery"
+    Type: "Multilist"
+  - Name: "EnquiryCTA"
+    Type: "Single-Line Text"
+Placeholders:
+  - "property-page-content"
+
+# Sample Property Items
+---
+ID: "property-001"
+Title: "Azure Residences Penthouse"
+Description: "Stunning penthouse with panoramic sea views."
+Location: "Palm Jumeirah, Dubai"
+Status: "Available"
+Features:
+  - "Private Pool"
+  - "Smart Home System"
+  - "Rooftop Terrace"
+Images:
+  - "/images/azure-penthouse-1.jpg"
+  - "/images/azure-penthouse-2.jpg"
+Community: "Palm Jumeirah"
+Gallery:
+  - "/images/azure-gallery-1.jpg"
+  - "/images/azure-gallery-2.jpg"
+EnquiryCTA: "Book a Viewing"
+---
+ID: "property-002"
+Title: "Marina Heights Apartment"
+Description: "Modern apartment in the heart of Dubai Marina."
+Location: "Dubai Marina, Dubai"
+Status: "Available"
+Features:
+  - "Balcony"
+  - "Fitness Center Access"
+  - "Covered Parking"
+Images:
+  - "/images/marina-heights-1.jpg"
+  - "/images/marina-heights-2.jpg"
+Community: "Dubai Marina"
+Gallery:
+  - "/images/marina-gallery-1.jpg"
+  - "/images/marina-gallery-2.jpg"
+EnquiryCTA: "Contact Agent"
+---
+ID: "property-003"
+Title: "Jumeirah Islands Villa"
+Description: "Spacious villa with landscaped gardens."
+Location: "Jumeirah Islands, Dubai"
+Status: "Sold"
+Features:
+  - "Garden"
+  - "Maid's Room"
+  - "Community Pool Access"
+Images:
+  - "/images/jumeirah-villa-1.jpg"
+  - "/images/jumeirah-villa-2.jpg"
+Community: "Jumeirah Islands"
+Gallery:
+  - "/images/jumeirah-villa-gallery-1.jpg"
+  - "/images/jumeirah-villa-gallery-2.jpg"
+EnquiryCTA: "Enquire for Similar"
+---
+ID: "property-004"
+Title: "Arabian Ranches Townhouse"
+Description: "Family-friendly townhouse near parks and schools."
+Location: "Arabian Ranches, Dubai"
+Status: "Available"
+Features:
+  - "Garage"
+  - "Play Area"
+  - "Golf Course Access"
+Images:
+  - "/images/arabian-townhouse-1.jpg"
+  - "/images/arabian-townhouse-2.jpg"
+Community: "Arabian Ranches"
+Gallery:
+  - "/images/arabian-townhouse-gallery-1.jpg"
+  - "/images/arabian-townhouse-gallery-2.jpg"
+EnquiryCTA: "Schedule a Visit"
+---
+ID: "property-005"
+Title: "Downtown Dubai Loft"
+Description: "Stylish loft with Burj Khalifa views."
+Location: "Downtown Dubai, Dubai"
+Status: "Coming Soon"
+Features:
+  - "Open Plan Living"
+  - "High Ceilings"
+  - "Opera District Access"
+Images:
+  - "/images/downtown-loft-1.jpg"
+  - "/images/downtown-loft-2.jpg"
+Community: "Downtown Dubai"
+Gallery:
+  - "/images/downtown-loft-gallery-1.jpg"
+  - "/images/downtown-loft-gallery-2.jpg"
+EnquiryCTA: "Register Interest"

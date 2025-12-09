@@ -1,0 +1,27 @@
+# CommunityDetail rendering definition
+---
+ID: "communitydetail-rendering"
+Name: "CommunityDetail"
+Component: "CommunityDetail"
+DataSource: "{community-item-path}"
+Description: "Displays all details of a community. Supports dynamic placeholders for amenities, location, gallery, etc. Editable by authors."
+GraphQL:
+  Query: |
+    query CommunityDetail($id: String!) {
+      item(path: $id) {
+        ... on CommunityPage {
+          Name
+          Description
+          Image
+          Location
+          Latitude
+          Longitude
+          Amenities
+          Gallery
+        }
+      }
+    }
+  Variables:
+    id: "{community-item-path}"
+Placeholders:
+  - "community-detail-content"

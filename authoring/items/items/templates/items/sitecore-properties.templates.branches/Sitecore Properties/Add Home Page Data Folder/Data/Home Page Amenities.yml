@@ -1,0 +1,17 @@
+# Home Page Amenities Sample Data
+Amenities:
+  - Name: "Private Beach"
+    Icon: "/images/amenity-beach.png"
+    Description: "Direct access to a private beach for residents."
+  - Name: "Fitness Center"
+    Icon: "/images/amenity-fitness.png"
+    Description: "State-of-the-art gym and wellness facilities."
+  - Name: "Children's Play Area"
+    Icon: "/images/amenity-play.png"
+    Description: "Safe and fun play areas for kids."
+  - Name: "Golf Course"
+    Icon: "/images/amenity-golf.png"
+    Description: "Championship golf course within the community."
+  - Name: "Community Pool"
+    Icon: "/images/amenity-pool.png"
+    Description: "Large swimming pool for residents."

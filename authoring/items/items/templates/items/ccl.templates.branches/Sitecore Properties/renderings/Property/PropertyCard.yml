@@ -1,0 +1,30 @@
+# PropertyCard rendering definition
+---
+ID: "propertycard-rendering"
+Name: "PropertyCard"
+Component: "PropertyCard"
+DataSource: "{property-item-path}"
+Description: "Displays a single property item. Supports multiple variants."
+Parameters:
+  - "Variant" # Selects Featured, Compact, or Detailed
+GraphQL:
+  Query: |
+    query PropertyCard($id: String!) {
+      item(path: $id) {
+        ... on PropertyCard {
+          Title
+          Description
+          Location
+          Status
+          Features
+          Images
+          Community
+          Gallery
+          EnquiryCTA
+        }
+      }
+    }
+  Variables:
+    id: "{property-item-path}"
+Placeholders:
+  - "property-card-content"

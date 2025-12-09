@@ -1,0 +1,17 @@
+# Home Page Testimonials Sample Data
+Testimonials:
+  - Author: "Sarah A."
+    Quote: "Sitecore Properties helped us find our dream home in Dubai. Exceptional service!"
+    Image: "/images/testimonial-sarah.jpg"
+  - Author: "Mohammed R."
+    Quote: "Professional, knowledgeable, and friendly agents. Highly recommended."
+    Image: "/images/testimonial-mohammed.jpg"
+  - Author: "Emily T."
+    Quote: "The community amenities and location are perfect for our family."
+    Image: "/images/testimonial-emily.jpg"
+  - Author: "David K."
+    Quote: "Smooth process from viewing to purchase. Thank you!"
+    Image: "/images/testimonial-david.jpg"
+  - Author: "Priya S."
+    Quote: "We love our new home and the support from Sitecore Properties."
+    Image: "/images/testimonial-priya.jpg"

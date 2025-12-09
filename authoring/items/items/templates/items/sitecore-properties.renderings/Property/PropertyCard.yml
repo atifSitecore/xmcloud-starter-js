@@ -1,0 +1,39 @@
+---
+ID: "sitecore-properties-rendering-propertycard"
+Path: "/sitecore/layout/Renderings/Project/sitecore-properties/Property/PropertyCard"
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: PropertyCard
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: "/sitecore/templates/Project/sitecore-properties/Components/Property/PropertyCard"
+- ID: "7d8ae35f-9ed1-4c30-9cd1-8bffd9c3a5a3"
+  Hint: Component GraphQL Query
+  Value: |
+    query PropertyCardQuery($datasource: String!, $language: String!) {
+      item(path: $datasource, language: $language) {
+        ... on PropertyCard {
+          title { jsonValue }
+          description { jsonValue }
+          location { jsonValue }
+          status { jsonValue }
+          features { jsonValue }
+          images { jsonValue }
+          community { jsonValue }
+          gallery { jsonValue }
+          enquiryCTA { jsonValue }
+        }
+      }
+    }
+- ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
+  Hint: OtherProperties
+  Value: IsRenderingsWithDynamicPlaceholders=true
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251209T120000Z

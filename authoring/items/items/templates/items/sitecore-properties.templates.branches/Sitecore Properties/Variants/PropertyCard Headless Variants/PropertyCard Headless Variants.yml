@@ -1,0 +1,36 @@
+# PropertyCard Headless Variants
+---
+ID: "propertycard-variant-featured"
+Name: "Featured"
+Description: "Highlights key property features with large image and CTA."
+Fields:
+  - "Title"
+  - "Description"
+  - "Location"
+  - "Status"
+  - "Features"
+  - "Images"
+  - "EnquiryCTA"
+---
+ID: "propertycard-variant-compact"
+Name: "Compact"
+Description: "Minimal layout for grid display."
+Fields:
+  - "Title"
+  - "Location"
+  - "Status"
+  - "Images"
+---
+ID: "propertycard-variant-detailed"
+Name: "Detailed"
+Description: "Full property details, gallery, and amenities."
+Fields:
+  - "Title"
+  - "Description"
+  - "Location"
+  - "Status"
+  - "Features"
+  - "Images"
+  - "Community"
+  - "Gallery"
+  - "EnquiryCTA"

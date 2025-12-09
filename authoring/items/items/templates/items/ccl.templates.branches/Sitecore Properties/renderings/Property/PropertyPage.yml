@@ -1,0 +1,28 @@
+# PropertyPage rendering definition
+---
+ID: "propertypage-rendering"
+Name: "PropertyPage"
+Component: "PropertyPage"
+DataSource: "{property-item-path}"
+Description: "Displays all details of a property. Supports dynamic placeholders for gallery, amenities, etc. Editable by authors."
+GraphQL:
+  Query: |
+    query PropertyPage($id: String!) {
+      item(path: $id) {
+        ... on PropertyPage {
+          Title
+          Description
+          Location
+          Status
+          Features
+          Images
+          Community
+          Gallery
+          EnquiryCTA
+        }
+      }
+    }
+  Variables:
+    id: "{property-item-path}"
+Placeholders:
+  - "property-page-content"
