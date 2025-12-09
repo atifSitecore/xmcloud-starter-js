@@ -1,4 +1,5 @@
 {
+  "namespace": "SitecoreProperties",
   "name": "Sitecore Properties",
   "description": "Real estate site template for Sitecore XM Cloud, inspired by Ellington Properties.",
   "templates": [

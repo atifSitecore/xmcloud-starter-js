@@ -1,1 +1,14 @@
-# Placeholder for Add Dictionary Items (to be customized for Sitecore Properties)
+---
+ID: "sitecore-properties-dictionary-items"
+Name: "Dictionary Items"
+Items:
+	- Key: "PropertyPage.Title"
+		Value: "Property Details"
+	- Key: "CommunityPage.Title"
+		Value: "Community Details"
+	- Key: "GlobalHeader.Welcome"
+		Value: "Welcome to Sitecore Properties"
+	- Key: "GlobalFooter.Contact"
+		Value: "Contact Us"
+	- Key: "EnquiryCTA.Text"
+		Value: "Enquire Now"

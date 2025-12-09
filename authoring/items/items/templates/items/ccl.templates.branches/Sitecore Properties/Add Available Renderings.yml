@@ -1,1 +1,13 @@
-# Placeholder for Add Available Renderings (to be customized for Sitecore Properties)
+---
+ID: "sitecore-properties-available-renderings"
+Name: "Available Renderings"
+Renderings:
+	- "PropertyCard"
+	- "PropertyGrid"
+	- "CommunityCard"
+	- "CommunityGrid"
+	- "GalleryGrid"
+	- "AmenitiesGrid"
+	- "TestimonialCarousel"
+	- "GlobalHeader"
+	- "GlobalFooter"

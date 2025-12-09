@@ -1,1 +1,17 @@
-# Placeholder for Add Taxonomy (to be customized for Sitecore Properties)
+---
+ID: "sitecore-properties-taxonomy"
+Name: "Taxonomy"
+Categories:
+	- "Residential"
+	- "Commercial"
+	- "Luxury"
+	- "Waterfront"
+	- "Family"
+	- "Investment"
+Amenities:
+	- "Private Pool"
+	- "Smart Home System"
+	- "Rooftop Terrace"
+	- "Fitness Center"
+	- "Children's Play Area"
+	- "Private Beach"
