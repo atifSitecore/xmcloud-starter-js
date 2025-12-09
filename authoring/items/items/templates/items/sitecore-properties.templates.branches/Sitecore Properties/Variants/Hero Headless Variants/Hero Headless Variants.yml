@@ -1,1 +1,20 @@
-# Placeholder for Hero Headless Variants (to be customized for Sitecore Properties)
+
+---
+ID: "bfa331e2-90ab-4ebb-95bf-6a5ac8ddfef3"
+Name: "Hero Default"
+Parent: "9221E7E8-FBC1-45BB-A522-42FFC3675746"
+Template: "35e75c72-4985-4e09-88c3-0eac6cd1e64f"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Variants/Hero Headless Variants"
+Description: "Hero section with background image, title, and subtitle."
+Fields:
+	- "BackgroundImage"
+	- "Title"
+	- "Subtitle"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+						Hint: __Created
+						Value: 20251210T000000Z
