@@ -1,1 +1,18 @@
 # Placeholder for Add Available Renderings (to be customized for Sitecore Properties)
+---
+ID: "{C3D4E5F6-A7B8-49C0-1D2E-3F4A5B6C7D8E}"
+Name: "Add Available Renderings"
+Parent: "{00000000-0000-0000-0000-000000000000}"
+Template: "{55555555-5555-5555-5555-555555555555}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Available Renderings"
+Description: "Available renderings for Sitecore Properties."
+Fields:
+	- "Rendering"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{66666666-6666-6666-6666-666666666666}"
+						Hint: __Created
+						Value: 20251210T000000Z

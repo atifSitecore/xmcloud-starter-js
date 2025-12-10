@@ -1,1 +1,19 @@
 # Placeholder for Add Dictionary Items (to be customized for Sitecore Properties)
+---
+ID: "{B2C3D4E5-F6A7-48B9-0C1D-2E3F4A5B6C7D}"
+Name: "Add Dictionary Items"
+Parent: "{00000000-0000-0000-0000-000000000000}"
+Template: "{33333333-3333-3333-3333-333333333333}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Dictionary Items"
+Description: "Dictionary items for Sitecore Properties."
+Fields:
+	- "Key"
+	- "Value"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{44444444-4444-4444-4444-444444444444}"
+						Hint: __Created
+						Value: 20251210T000000Z

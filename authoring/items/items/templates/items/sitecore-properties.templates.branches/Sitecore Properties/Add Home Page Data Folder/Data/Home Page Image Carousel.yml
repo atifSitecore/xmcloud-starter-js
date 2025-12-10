@@ -1,1 +1,18 @@
 # Placeholder for Home Page Image Carousel (to be customized for Sitecore Properties)
+---
+ID: "{B0C1D2E3-F4A5-67B8-9C0D-1E2F3A4B5C6D}"
+Name: "Home Page Image Carousel"
+Parent: "{D4E5F6A7-B8C9-40D1-2E3F-4A5B6C7D8E9F}"
+Template: "{42424242-4242-4242-4242-424242424242}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Home Page Data Folder/Data/Home Page Image Carousel"
+Description: "Image carousel data for home page."
+Fields:
+	- "ImageCarouselData"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{43434343-4343-4343-4343-434343434343}"
+						Hint: __Created
+						Value: 20251210T000000Z

@@ -1,1 +1,18 @@
 # Placeholder for Accordion Headless Variants (to be customized for Sitecore Properties)
+---
+ID: "{A3B4C5D6-E7F8-49A0-1B2C-3D4E5F6A7B8C}"
+Name: "Accordion Headless Variants"
+Parent: "{E5F6A7B8-C9D0-41E2-3F4A-5B6C7D8E9F0A}"
+Template: "{16161616-1616-1616-1616-161616161616}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Variants/Accordion Headless Variants"
+Description: "Accordion variants for Sitecore Properties."
+Fields:
+	- "AccordionVariant"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{17171717-1717-1717-1717-171717171717}"
+						Hint: __Created
+						Value: 20251210T000000Z

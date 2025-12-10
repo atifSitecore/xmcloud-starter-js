@@ -1,1 +1,18 @@
 # Placeholder for Home Page Text Banner (to be customized for Sitecore Properties)
+---
+ID: "{D2E3F4A5-B6C7-89D0-1E2F-3A4B5C6D7E8F}"
+Name: "Home Page Text Banner"
+Parent: "{D4E5F6A7-B8C9-40D1-2E3F-4A5B6C7D8E9F}"
+Template: "{46464646-4646-4646-4646-464646464646}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Home Page Data Folder/Data/Home Page Text Banner"
+Description: "Text banner data for home page."
+Fields:
+	- "TextBannerData"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{47474747-4747-4747-4747-474747474747}"
+						Hint: __Created
+						Value: 20251210T000000Z

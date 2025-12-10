@@ -1,1 +1,18 @@
 # Placeholder for Variants (to be customized for Sitecore Properties)
+---
+ID: "{E5F6A7B8-C9D0-41E2-3F4A-5B6C7D8E9F0A}"
+Name: "Variants"
+Parent: "{00000000-0000-0000-0000-000000000000}"
+Template: "{99999999-9999-9999-9999-999999999999}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Variants"
+Description: "Variants for Sitecore Properties."
+Fields:
+	- "Variant"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{10101010-1010-1010-1010-101010101010}"
+						Hint: __Created
+						Value: 20251210T000000Z

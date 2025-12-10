@@ -1,1 +1,18 @@
 # Placeholder for GlobalFooter Headless Variants (to be customized for Sitecore Properties)
+---
+ID: "{D1E2F3A4-B5C6-78D9-0E1F-2A3B4C5D6E7F}"
+Name: "GlobalFooter Headless Variants"
+Parent: "{E5F6A7B8-C9D0-41E2-3F4A-5B6C7D8E9F0A}"
+Template: "{34343434-3434-3434-3434-343434343434}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Variants/GlobalFooter Headless Variants"
+Description: "Global footer variants for Sitecore Properties."
+Fields:
+	- "GlobalFooterVariant"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{35353535-3535-3535-3535-353535353535}"
+						Hint: __Created
+						Value: 20251210T000000Z

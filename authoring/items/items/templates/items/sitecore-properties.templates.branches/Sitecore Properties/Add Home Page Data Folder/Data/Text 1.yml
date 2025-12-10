@@ -1,1 +1,18 @@
 # Placeholder for Text 1 (to be customized for Sitecore Properties)
+---
+ID: "{E3F4A5B6-C7D8-90E1-2F3A-4B5C6D7E8F9A}"
+Name: "Text 1"
+Parent: "{D4E5F6A7-B8C9-40D1-2E3F-4A5B6C7D8E9F}"
+Template: "{48484848-4848-4848-4848-484848484848}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Home Page Data Folder/Data/Text 1"
+Description: "Text data for home page."
+Fields:
+	- "TextData"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{49494949-4949-4949-4949-494949494949}"
+						Hint: __Created
+						Value: 20251210T000000Z

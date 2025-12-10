@@ -1,1 +1,18 @@
 # Placeholder for Add Enumerations (to be customized for Sitecore Properties)
+---
+ID: "{F6A7B8C9-D0E1-42F3-4A5B-6C7D8E9F0A1B}"
+Name: "Add Enumerations"
+Parent: "{00000000-0000-0000-0000-000000000000}"
+Template: "{12121212-1212-1212-1212-121212121212}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Enumerations"
+Description: "Enumerations for Sitecore Properties."
+Fields:
+	- "Enumeration"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{13131313-1313-1313-1313-131313131313}"
+						Hint: __Created
+						Value: 20251210T000000Z

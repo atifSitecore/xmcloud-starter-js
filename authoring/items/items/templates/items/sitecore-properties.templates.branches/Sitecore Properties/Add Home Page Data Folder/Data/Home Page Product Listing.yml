@@ -1,1 +1,18 @@
 # Placeholder for Home Page Product Listing (to be customized for Sitecore Properties)
+---
+ID: "{A9B0C1D2-E3F4-56A7-8B9C-0D1E2F3A4B5C}"
+Name: "Home Page Product Listing"
+Parent: "{D4E5F6A7-B8C9-40D1-2E3F-4A5B6C7D8E9F}"
+Template: "{40404040-4040-4040-4040-404040404040}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Home Page Data Folder/Data/Home Page Product Listing"
+Description: "Product listing data for home page."
+Fields:
+	- "ProductListingData"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{41414141-4141-4141-4141-414141414141}"
+						Hint: __Created
+						Value: 20251210T000000Z

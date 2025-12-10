@@ -1,1 +1,18 @@
 # Placeholder for Home Page Accordion (to be customized for Sitecore Properties)
+---
+ID: "{F8A9B0C1-D2E3-45F6-7A8B-9C0D1E2F3A4B}"
+Name: "Home Page Accordion"
+Parent: "{D4E5F6A7-B8C9-40D1-2E3F-4A5B6C7D8E9F}"
+Template: "{38383838-3838-3838-3838-383838383838}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Home Page Data Folder/Data/Home Page Accordion"
+Description: "Accordion data for home page."
+Fields:
+	- "AccordionData"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{39393939-3939-3939-3939-393939393939}"
+						Hint: __Created
+						Value: 20251210T000000Z

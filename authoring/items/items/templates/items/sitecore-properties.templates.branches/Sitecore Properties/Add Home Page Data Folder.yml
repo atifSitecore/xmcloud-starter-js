@@ -1,1 +1,18 @@
 # Placeholder for Add Home Page Data Folder (to be customized for Sitecore Properties)
+---
+ID: "{D4E5F6A7-B8C9-40D1-2E3F-4A5B6C7D8E9F}"
+Name: "Add Home Page Data Folder"
+Parent: "{00000000-0000-0000-0000-000000000000}"
+Template: "{77777777-7777-7777-7777-777777777777}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Home Page Data Folder"
+Description: "Home page data folder for Sitecore Properties."
+Fields:
+	- "DataFolder"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{88888888-8888-8888-8888-888888888888}"
+						Hint: __Created
+						Value: 20251210T000000Z

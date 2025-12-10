@@ -1,1 +1,18 @@
 # Placeholder for Sample Images (to be customized for Sitecore Properties)
+---
+ID: "{A2B3C4D5-E6F7-48A9-9B0C-1D2E3F4A5B6D}"
+Name: "Sample Images"
+Parent: "{A1B2C3D4-E5F6-47A8-9B0C-1D2E3F4A5B6C}"
+Template: "{14141414-1414-1414-1414-141414141414}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Sample Images/Sample Images"
+Description: "Sample image item for Sitecore Properties."
+Fields:
+	- "Image"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{15151515-1515-1515-1515-151515151515}"
+						Hint: __Created
+						Value: 20251210T000000Z

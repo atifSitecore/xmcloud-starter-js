@@ -1,1 +1,18 @@
 # Placeholder for Home Page Promo (to be customized for Sitecore Properties)
+---
+ID: "{C1D2E3F4-A5B6-78C9-0D1E-2F3A4B5C6D7E}"
+Name: "Home Page Promo"
+Parent: "{D4E5F6A7-B8C9-40D1-2E3F-4A5B6C7D8E9F}"
+Template: "{44444444-4444-4444-4444-444444444444}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Add Home Page Data Folder/Data/Home Page Promo"
+Description: "Promo data for home page."
+Fields:
+	- "PromoData"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{45454545-4545-4545-4545-454545454545}"
+						Hint: __Created
+						Value: 20251210T000000Z

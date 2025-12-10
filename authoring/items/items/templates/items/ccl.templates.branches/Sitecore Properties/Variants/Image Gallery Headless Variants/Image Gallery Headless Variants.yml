@@ -1,1 +1,18 @@
 # Placeholder for Image Gallery Headless Variants (to be customized for Sitecore Properties)
+---
+ID: "{B4C5D6E7-F8A9-40B1-2C3D-4E5F6A7B8C9D}"
+Name: "Image Gallery Headless Variants"
+Parent: "{E5F6A7B8-C9D0-41E2-3F4A-5B6C7D8E9F0A}"
+Template: "{18181818-1818-1818-1818-181818181818}"
+Path: "/sitecore/templates/Branches/Project/sitecore-properties.templates.branches/Sitecore Properties/Variants/Image Gallery Headless Variants"
+Description: "Image gallery variants for Sitecore Properties."
+Fields:
+	- "ImageGalleryVariant"
+Languages:
+	- Language: en
+		Versions:
+			- Version: 1
+				Fields:
+					- ID: "{19191919-1919-1919-1919-191919191919}"
+						Hint: __Created
+						Value: 20251210T000000Z
